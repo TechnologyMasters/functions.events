@@ -1,8 +1,8 @@
 repository:
-  name: 2018
+  name: website
   description: Contribute to Functions Conf
   topics: conference, functions, faas, serverless, serverlessdays, serverlessTO, serverlessVan
-  homepage: https://functions.world
+  homepage: https://functions.events
   private: false
   has_issues: false
   has_wiki: false
