@@ -1,0 +1,45 @@
+title: Functions 2018 - Toronto
+description: >-
+  Enabling Creativity, Exploration, Discussion and Learning for Developers creating the
+  future of Function as a Service (FaaS) architecture.
+
+url: https://toronto.functions.events
+
+collections_dir: _collections
+
+future: true
+
+collections:
+  events:
+    output: true
+    permalink: /:path/index:output_ext
+
+  speakers:
+    output: true
+    permalink: /:path/index:output_ext
+
+  partners:
+    output: true
+    permalink: /:path/index:output_ext
+
+defaults:
+  - scope:
+      type: events
+    values:
+      layout: home
+
+  - scope:
+      type: speakers
+    values:
+      layout: speaker
+
+  - scope:
+      type: partners
+    values:
+      layout: partner
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap

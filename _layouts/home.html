@@ -1,0 +1,85 @@
+---
+layout: blank
+---
+
+<div class="container d-flex flex-column w-100 h-100 pt-5 mx-auto">
+  {% include header.html %}
+
+  <div class="d-flex justify-content-between align-items-center my-auto">
+    <section class="title w-75">
+      <img class="w-100 mb-4" src="logo.svg"/>
+
+      <div class="d-flex align-items-center  mb-5">
+        <img class="w-50" src="serverlessdays.svg"/> 
+        <h2 class="m-0 ml-4">{{ page.city }}</h2>
+      </div>
+
+      <div class="lead mb-5">{{ content }}</div>
+      
+      <a href="{{ page.tickets }}" class="btn btn-lg btn-primary px-5" id="eventbrite-widget-modal-trigger">Register Now</a>
+    </section>
+
+    <section>
+      <table>
+        <tr>
+          <td><span>{{ page.date | date: "%A" }}</span>{{ page.date | date: "%d - %b - %Y" }}</td>
+        </tr>
+        <tr>
+          <td colspan="2"><span>Canada</span>{{ page.city }}</td>
+        </tr>
+        <tr>
+          <td colspan="2"><span>Venue</span> <a href="#location">{{ page.venue }}</a></td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>
+
+<div class="container w-100 pt-5 my-5">
+  <h2 class="my-5">Speakers</h2>
+  <div class="row">
+    {% for speaker in site.speakers %}
+      <div class="speaker col-sm-4 my-3">
+        <img class="mr-3" src="speakers/{{ speaker.slug }}.png"/>
+        <a href="{{ speaker.url }}">{{ speaker.name }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container w-100 pt-5 my-5">
+  <h2 class="my-5">Partners</h2>
+
+  {% for partner in site.partners %}
+    <div class="partner col-sm-4 my-3">
+      <img class="mr-3" src="partners/{{ partner.slug }}.svg"/>
+    </div>
+  {% endfor %}
+</div>
+
+
+<div class="container w-100 pt-5 my-5">
+  <h2 class="my-5">Location</h2>
+</div>
+
+<!-- {% include footer.html %} -->
+<div id="map" class="w-100"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOs6YXRoFe_HJKsUaRYSthoY8JWKEQnWM"></script>
+<script src="/js/map.js"></script>
+
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+  var exampleCallback = function () {
+    console.log('Order complete!')
+  }
+
+  window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '47131227771',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger',
+    onOrderComplete: exampleCallback
+  })
+</script>

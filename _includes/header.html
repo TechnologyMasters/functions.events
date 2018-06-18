@@ -1,0 +1,17 @@
+{% assign current = page.url | split: '/' %}
+
+{% assign base = current[1] | append: '/' | append: current[2] %}
+
+<header class="d-flex justify-content-between">
+
+  <img src="/{{ base }}/icon.svg"/>
+
+  <nav class="nav justify-content-center my-auto">
+    <a class="nav-link active" href="/{{ base }}/">Home</a>
+    <a class="nav-link" href="/{{ base }}/speakers/">Speakers</a>
+    <a class="nav-link" href="/{{ base }}/schedule">Schedule</a>
+    <a class="nav-link" href="/{{ base }}/partners">Partners</a>
+    <a class="nav-link" href="/events">Past Events</a>
+    <a class="nav-link btn btn-primary">Reserve Your Spot</a>
+  </nav>
+</header>

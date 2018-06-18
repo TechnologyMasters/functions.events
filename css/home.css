@@ -1,0 +1,36 @@
+@import "/css/base.css";
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+table td {
+  border: var(--size-border) solid var(--color-text);
+  padding: 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+table td span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.partner img,
+.speaker img {
+  height: 4rem;
+}
+
+.speaker a {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#map {
+  height: 500px;
+}
