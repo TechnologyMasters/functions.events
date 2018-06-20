@@ -4,8 +4,6 @@
 
 To run locally, start by installing `Docker` & `Docker Compose`, then follow these steps to generate an SSL certificate for local usage:
 
-#### Create CA key and cert
-
 ```bash
 cd ssl
 openssl genrsa -out root.key 2048
@@ -16,6 +14,6 @@ openssl x509 -req -in localhost.csr -CA root.pem -CAkey root.key -CAcreateserial
 
 #### Add cert to the browser
 
-```
+```plain
 Chrome -> Setting -> (Advanced) Manage Certificates -> Import -> 'root.pem'
 ```
