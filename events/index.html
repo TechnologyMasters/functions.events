@@ -4,5 +4,16 @@ layout: events
 
 {% for event in site.events reversed %}
   {% assign link = event.url | replace: "/index.html", "" %}
-  <a href="{{ link }}"><img src="{{ link }}/logo.svg"/></a>
+  {% if event.date %}
+    <a href="{{ link }}">
+        <img src="/images/{{ event.date | date: '%Y' }}/logo.svg"/>
+      
+      <div class="d-flex justify-content-center align-items-center">
+        <img class="w-25" src="/images/serverlessdays.svg"/> 
+        <h2 class="m-0 ml-4">{{ event.city }}</h2>
+      </div>
+
+      <div>{{ event.date | date: '%d %B %Y' }}</div>
+    </a>
+  {% endif %}
 {% endfor %}

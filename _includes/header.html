@@ -1,25 +1,51 @@
 {% assign current = page.url | split: '/' %}
 
-{% assign base = current[1] | append: '/' | append: current[2] %}
+{% assign year = current[1] %}
+{% assign city = current[2] %}
+{% assign today = site.time | date: '%Y' %}
 
-{% assign speakers = site.speakers | where: "year", current[1] | where: "city", current[2] %}
+{% assign speakers = site.speakers | where: "year", year | where: "city", city %}
+{% assign event = site.events | where: "year", year | where: "city", city %}
 
 <header class="d-flex justify-content-between">
 
-  <img src="/{{ base }}/icon.svg"/>
+  <img src="/images/{{ year }}/icon.svg"/>
 
   <nav class="nav justify-content-center my-auto">
-    <a class="nav-link active" href="/{{ base }}/">Home</a>
+    <a class="nav-link active" href="/{{ year }}/{{ city }}">Home</a>
     {% if speakers.size > 0 %}
-    <a class="nav-link" href="/{{ base }}/speakers/">Speakers</a>
-    <a class="nav-link" href="/{{ base }}/schedule">Schedule</a>
+      <a class="nav-link" href="#speakers">Speakers</a>
+      <a class="nav-link" href="#schedule">Schedule</a>
+      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/speakers/">Speakers</a> -->
+      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/schedule/">Schedule</a> -->
     {% endif %}
 
     {% if partners.size > 0 %}
-    <a class="nav-link" href="/{{ base }}/partners">Partners</a>
+      <a class="nav-link" href="#partners">Partners</a>
+      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/partners">Partners</a> -->
     {% endif %}
 
-    <a class="nav-link" href="/events">Past Events</a>
-    <a class="nav-link btn btn-primary">Reserve Your Spot</a>
+
+    {% if today > year %}
+      <a class="nav-link" href="/events">Future Events</a>
+    {% else %}
+      <a class="nav-link" href="/events">Past Events</a>
+    {% endif %}
+
+    <a id="header-ticket" class="nav-link btn btn-primary" href="{{ event.tickets }}">Reserve Your Spot</a>
   </nav>
 </header>
+
+<script type="text/javascript">
+  var exampleCallback = function () {
+    console.log('Order complete!')
+  }
+
+  window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '47131227771',
+    modal: true,
+    modalTriggerElementId: 'header-ticket',
+    onOrderComplete: exampleCallback
+  })
+</script>
