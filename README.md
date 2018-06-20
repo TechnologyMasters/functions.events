@@ -2,7 +2,7 @@
 
 ### Local Development
 
-To run locally, start by installing `Docker` & `Docker Compose`, then follow these steps to generate an SSL certificate for local usage:
+To run locally, start by generating an SSL certificate for local usage:
 
 ```bash
 cd ssl
@@ -16,4 +16,10 @@ openssl x509 -req -in localhost.csr -CA root.pem -CAkey root.key -CAcreateserial
 
 ```plain
 Chrome -> Setting -> (Advanced) Manage Certificates -> Import -> 'root.pem'
+```
+
+### Run with `Docker Compose`
+
+```bash
+docker-compose up
 ```
