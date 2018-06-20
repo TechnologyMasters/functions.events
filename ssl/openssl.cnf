@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = functions
+
+[functions]
+C = CA
+ST = Ontario
+L = Toronto
+O = Functions Conf
+OU = Functions Website
+emailAddress = contact@functions.events
+CN = functions

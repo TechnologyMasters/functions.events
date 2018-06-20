@@ -2,7 +2,7 @@ version: '2'
 
 services:
   jekyll:
-    command: jekyll serve --livereload
+    command: jekyll serve --livereload --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt
     image: jekyll/jekyll:latest
     volumes:
       - $PWD:/srv/jekyll
