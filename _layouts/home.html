@@ -2,6 +2,10 @@
 layout: blank
 ---
 
+{% assign current = page.url | split: '/' %}
+
+{% assign speakers = site.speakers | where: "year", current[1] | where: "city", current[2] %}
+
 <div class="container d-flex flex-column w-100 h-100 pt-5 mx-auto">
   {% include header.html %}
 
@@ -35,35 +39,40 @@ layout: blank
   </div>
 </div>
 
-<div class="container w-100 pt-5 my-5">
-  <h2 class="my-5">Speakers</h2>
-  <div class="row">
-    {% for speaker in site.speakers %}
-      <div class="speaker col-sm-4 my-3">
-        <img class="mr-3" src="speakers/{{ speaker.slug }}.png"/>
-        <a href="{{ speaker.url }}">{{ speaker.name }}</a>
+{% if speakers.size > 0 %}
+  <div class="container w-100 pt-5 my-5">
+    <h2 class="my-5">Speakers</h2>
+    <div class="row">
+      {% for speaker in speakers %}
+        <div class="speaker col-sm-4 my-3">
+          <img class="mr-3" src="speakers/{{ speaker.slug }}.png"/>
+          <a href="{{ speaker.url }}">{{ speaker.name }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% if partners.size > 0 %}
+  <div class="container w-100 pt-5 my-5">
+    <h2 class="my-5">Partners</h2>
+
+    {% for partner in site.partners %}
+      <div class="partner col-sm-4 my-3">
+        <img class="mr-3" src="partners/{{ partner.slug }}.svg"/>
       </div>
     {% endfor %}
   </div>
-</div>
+{% endif %}
 
-<div class="container w-100 pt-5 my-5">
-  <h2 class="my-5">Partners</h2>
-
-  {% for partner in site.partners %}
-    <div class="partner col-sm-4 my-3">
-      <img class="mr-3" src="partners/{{ partner.slug }}.svg"/>
-    </div>
-  {% endfor %}
-</div>
-
-
-<div class="container w-100 pt-5 my-5">
-  <h2 class="my-5">Location</h2>
-</div>
+{% if location.size > 0 %}
+  <div class="container w-100 pt-5 my-5">
+    <h2 class="my-5">Location</h2>
+  </div>
+{% endif %}
 
 <!-- {% include footer.html %} -->
-<div id="map" class="w-100"></div>
+<div id="map" class="w-100 h-100"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOs6YXRoFe_HJKsUaRYSthoY8JWKEQnWM"></script>
 <script src="/js/map.js"></script>
