@@ -1,4 +1,6 @@
 vendor
+ssl/root.*
+ssl/localhost.*
 _site
 .sass-cache
 .jekyll-metadata

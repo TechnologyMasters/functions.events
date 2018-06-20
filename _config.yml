@@ -9,9 +9,8 @@ collections_dir: _collections
 
 future: true
 
-include:
-  - 2017
-  - 2018
+exclude:
+  - ssl
 
 collections:
   events:
