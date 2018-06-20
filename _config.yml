@@ -11,6 +11,8 @@ future: true
 
 exclude:
   - ssl
+  - Dockerfile
+  - docker-compose.yml
 
 collections:
   events:

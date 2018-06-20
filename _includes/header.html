@@ -15,7 +15,7 @@
     <a class="nav-link active" href="/{{ year }}/{{ city }}">Home</a>
     {% if speakers.size > 0 %}
       <a class="nav-link" href="#speakers">Speakers</a>
-      <a class="nav-link" href="#schedule">Schedule</a>
+      <!-- <a class="nav-link" href="#schedule">Schedule</a> -->
       <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/speakers/">Speakers</a> -->
       <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/schedule/">Schedule</a> -->
     {% endif %}
@@ -32,20 +32,6 @@
       <a class="nav-link" href="/events">Past Events</a>
     {% endif %}
 
-    <a id="header-ticket" class="nav-link btn btn-primary" href="{{ event.tickets }}">Reserve Your Spot</a>
+    <a class="nav-link btn btn-primary" href="#tickets">Reserve Your Spot</a>
   </nav>
 </header>
-
-<script type="text/javascript">
-  var exampleCallback = function () {
-    console.log('Order complete!')
-  }
-
-  window.EBWidgets.createWidget({
-    widgetType: 'checkout',
-    eventId: '47131227771',
-    modal: true,
-    modalTriggerElementId: 'header-ticket',
-    onOrderComplete: exampleCallback
-  })
-</script>

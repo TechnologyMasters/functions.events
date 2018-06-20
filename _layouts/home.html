@@ -23,7 +23,7 @@ layout: blank
 
       <div class="lead mb-5">{{ content }}</div>
       
-      <a href="{{ page.tickets }}" class="btn btn-lg btn-primary px-5" id="body-ticket">Register Now</a>
+      <a href="#tickets" class="btn btn-lg btn-primary px-5" id="body-ticket">Register Now</a>
     </section>
 
     <section>
@@ -35,7 +35,7 @@ layout: blank
           <td colspan="2"><span>Canada</span>{{ page.city }}</td>
         </tr>
         <tr>
-          <td colspan="2"><span>Venue</span> <a href="#map">{{ page.venue }}</a></td>
+          <td colspan="2"><span>Venue</span> <a href="#location">{{ page.venue }}</a></td>
         </tr>
       </table>
     </section>
@@ -43,8 +43,8 @@ layout: blank
 </div>
 
 {% if speakers.size > 0 %}
-  <div class="container w-100 pt-5 my-5">
-    <h2 id="speakers" class="my-5">Speakers</h2>
+  <div class="container w-100 my-5">
+    <h2 id="speakers" class="py-5">Speakers</h2>
     <div class="row">
       {% for speaker in speakers %}
         <div class="speaker col-sm-4 my-3">
@@ -57,9 +57,29 @@ layout: blank
   </div>
 {% endif %}
 
+{% if page.eventbrite %}
+  <div class="container w-100 h-100 my-5">
+    <h2 id="tickets" class="py-5">Tickets</h2>
+    <div id="eventbrite-widget-container-{{ page.eventbrite }}" class="h-75"></div>
+
+    <script type="text/javascript">
+      window.EBWidgets.createWidget({
+        // Required
+        widgetType: 'checkout',
+        eventId: '{{ page.eventbrite }}',
+        iframeContainerId: 'eventbrite-widget-container-{{ page.eventbrite }}',
+
+        // Optional
+        iframeContainerHeight: 500,
+        onOrderComplete: () => console.log('Order complete!')
+      })
+    </script>
+  </div>
+{% endif %}
+
 {% if partners.size > 0 %}
-  <div class="container w-100 pt-5 my-5">
-    <h2 id="partners" class="my-5">Partners</h2>
+  <div class="container w-100 my-5">
+    <h2 id="partners" class="py-5">Partners</h2>
 
     {% for partner in site.partners %}
       <div class="partner col-sm-4 my-3">
@@ -70,27 +90,18 @@ layout: blank
 {% endif %}
 
 {% if speaker.size > 0 %}
-  <div class="container w-100 pt-5 my-5">
-    <h2 id="schedule" class="my-5">Schedule</h2>
+  <div class="container w-100 my-5">
+    <h2 id="schedule" class="py-5">Schedule</h2>
   </div>
 {% endif %}
 
+<div class="container w-100 my-5">
+  <h2 id="location" class="py-5">Location</h2>
+  <p>{{ page.venue }}</p>
+</div>
+
 <!-- {% include footer.html %} -->
-<div id="map" class="w-100 h-100"></div>
+<div id="map" class="container w-100 h-50"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOs6YXRoFe_HJKsUaRYSthoY8JWKEQnWM"></script>
 <script src="/js/map.js"></script>
-
-<script type="text/javascript">
-  var exampleCallback = function () {
-    console.log('Order complete!')
-  }
-
-  window.EBWidgets.createWidget({
-    widgetType: 'checkout',
-    eventId: '47131227771',
-    modal: true,
-    modalTriggerElementId: 'body-ticket',
-    onOrderComplete: exampleCallback
-  })
-</script>
