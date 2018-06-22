@@ -39,6 +39,27 @@ table td span {
   font-weight: 700;
 }
 
-#map {
-  height: 500px;
+.bordered {
+  background-clip: padding-box;
+
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 5px #293463,
+    0 0 0 10px #325b88,
+    0 0 0 15px #533264,
+    0 0 0 20px #423163
+}
+
+.map-content {
+  color: var(--color-primary);
+}
+
+.map-content a {
+  color: inherit;
+}
+
+.map-content .name {
+  font-weight: bold;
 }

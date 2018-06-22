@@ -36,7 +36,7 @@ layout: blank
           <td colspan="2"><span>Canada</span>{{ page.city }}</td>
         </tr>
         <tr>
-          <td colspan="2"><span>Venue</span> <a href="#location">{{ page.venue }}</a></td>
+          <td colspan="2"><span>Venue</span> <a href="#location">{{ page.venue.name }}</a></td>
         </tr>
       </table>
     </section>
@@ -61,20 +61,8 @@ layout: blank
 {% if page.eventbrite %}
   <div class="container w-100 h-100 my-5">
     <h2 id="tickets" class="py-5">Tickets</h2>
-    <div id="eventbrite-widget-container-{{ page.eventbrite }}" class="h-75"></div>
 
-    <script type="text/javascript">
-      window.EBWidgets.createWidget({
-        // Required
-        widgetType: 'checkout',
-        eventId: '{{ page.eventbrite }}',
-        iframeContainerId: 'eventbrite-widget-container-{{ page.eventbrite }}',
-
-        // Optional
-        iframeContainerHeight: 500,
-        onOrderComplete: () => console.log('Order complete!')
-      })
-    </script>
+    <div id="eventbrite-widget-container-{{ page.eventbrite }}" class="h-75 bordered"></div>
   </div>
 {% endif %}
 
@@ -96,13 +84,39 @@ layout: blank
   </div>
 {% endif %}
 
-<div class="container w-100 my-5">
-  <h2 id="location" class="py-5">Location</h2>
-  <p>{{ page.venue }}</p>
-</div>
+{% if page.venue %}
+  <div class="container w-100 my-5">
+    <h2 id="location" class="py-5">Location</h2>
+    <p><strong>{{ page.venue.name }}</strong></p>
+    <p><a href="{{ page.venue.map }}">{{ page.venue.address }}</a></p>
+  </div>
 
-<!-- {% include footer.html %} -->
-<div id="map" class="container w-100 h-50"></div>
+  <div class="container h-50">
+    <div id="map" class="h-100 w-100 bordered"></div>
+  </div>
+{% endif %}
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOs6YXRoFe_HJKsUaRYSthoY8JWKEQnWM"></script>
-<script src="/js/map.js"></script>
+{% if page.eventbrite %}
+  <script type="text/javascript">
+    window.EBWidgets.createWidget({
+      // Required
+      widgetType: 'checkout',
+      eventId: '{{ page.eventbrite }}',
+      iframeContainerId: 'eventbrite-widget-container-{{ page.eventbrite }}',
+
+      // Optional
+      iframeContainerHeight: 500,
+      onOrderComplete: () => console.log('Order complete!')
+    })
+  </script>
+{% endif %}
+
+{% if page.venue %}
+  <script>
+    const venue = {{ page.venue | jsonify }}
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOs6YXRoFe_HJKsUaRYSthoY8JWKEQnWM&libraries=places"></script>
+  <script src="/js/map.js"></script>
+{% endif %}
+
+{% include footer.html %}
