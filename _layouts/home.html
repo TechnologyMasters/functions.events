@@ -2,12 +2,11 @@
 layout: blank
 ---
 
-{% assign current = page.url | split: '/' %}
+{% assign date = site.time %}
+{% assign year = page.date | date: '%Y' %}
+{% assign city = page.city | downcase %}
 
-{% assign year = current[1] %}
-{% assign city = current[2] %}
-
-{% assign speakers = site.speakers | where: "year", year | where: "city", city %}
+{% assign speakers = site.speakers | where: "year", year | where: "city", page.city %}
 
 <div class="container d-flex flex-column w-100 h-100 pt-5 mx-auto">
   {% include header.html %}
@@ -22,9 +21,11 @@ layout: blank
       </div>
 
       <div class="lead mb-5">{{ content }}</div>
-      
-      <a href="#tickets" class="btn btn-lg btn-primary px-5" id="body-ticket">Register Now</a>
-      <a href="{{ page.cfp }}" class="btn btn-lg btn-primary btn-secondary px-5 ml-5">Call for Papers</a>
+
+      {% if page.date >= date %}
+        <a href="#tickets" class="btn btn-lg btn-primary px-5" id="body-ticket">Reserve Your Spot</a>
+        <a href="{{ page.cfp }}" class="btn btn-lg btn-primary btn-secondary px-5 ml-5">Call for Papers</a>
+      {% endif %}
     </section>
 
     <section>
@@ -58,7 +59,7 @@ layout: blank
   </div>
 {% endif %}
 
-{% if page.eventbrite %}
+{% if page.date >= date and page.eventbrite %}
   <div class="container w-100 h-100 my-5">
     <h2 id="tickets" class="py-5">Tickets</h2>
 
@@ -96,7 +97,7 @@ layout: blank
   </div>
 {% endif %}
 
-{% if page.eventbrite %}
+{% if page.date >= date and page.eventbrite %}
   <script type="text/javascript">
     window.EBWidgets.createWidget({
       // Required
