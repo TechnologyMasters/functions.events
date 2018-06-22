@@ -17,15 +17,15 @@ exclude:
 collections:
   events:
     output: true
-    permalink: /:path/index:output_ext
+    permalink: /:path/
 
   speakers:
     output: true
-    permalink: /:path/index:output_ext
+    permalink: /:path/
 
   partners:
     output: true
-    permalink: /:path/index:output_ext
+    permalink: /:path/
 
 defaults:
   - scope:
