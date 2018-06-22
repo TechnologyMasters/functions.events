@@ -1,9 +1,9 @@
 {% assign url = page.url | split: '/' %}
-{% assign today = site.time | date: '%Y' %}
+{% assign today = site.time | date: '%Y' | convert: "number" %}
 {% assign current = site.events | where:"current", true | first %}
 
-{% if url[2] == '' %}
-  {% assign year = url[1] %}
+{% if url[2] %}
+  {% assign year = url[1] | convert: "number" %}
   {% assign city = url[2] %}
 {% else %}
   {% assign year = current.date | date: '%Y' %}
@@ -41,6 +41,8 @@
       <a class="nav-link" href="/events">Past Events</a>
     {% endif %}
 
-    <a class="nav-link btn btn-primary" href="#tickets">Reserve Your Spot</a>
+    {% if year >= today %}
+      <a class="nav-link btn btn-primary" href="/{{ year }}/{{ city }}/#tickets">Register Now</a>
+    {% endif %}
   </nav>
 </header>
