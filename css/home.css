@@ -11,7 +11,7 @@ a {
 h2 {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.5rm;
 }
 
 table td {
@@ -27,6 +27,10 @@ table td span {
   display: block;
   font-size: 1rem;
   font-weight: 300;
+}
+
+main {
+  min-height: 100%;
 }
 
 .partner img,

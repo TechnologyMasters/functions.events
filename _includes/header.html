@@ -16,10 +16,9 @@
 {% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
 
 <header class="d-flex justify-content-between mb-5">
+  <img class="d-none d-md-block" src="/images/{{ year }}/icon.svg"/>
 
-  <img src="/images/{{ year }}/icon.svg"/>
-
-  <nav class="nav justify-content-center my-auto">
+  <nav class="nav my-auto">
     <a class="nav-link {% if page.url == home %}active{% endif %}" href="{{ home }}">Home</a>
     {% if speakers.size > 0 %}
       <a class="nav-link" href="#speakers">Speakers</a>
@@ -33,8 +32,6 @@
       <!-- <a class="nav-link" href="{{ home }}/partners">Partners</a> -->
     {% endif %}
 
-    <a class="nav-link {% if page.url == '/conduct/' %}active{% endif %}" href="/conduct/">Conduct</a>
-
     {% if today > year %}
       <a class="nav-link" href="/events">Future Events</a>
     {% else %}
@@ -42,7 +39,7 @@
     {% endif %}
 
     {% if year >= today %}
-      <a class="nav-link btn btn-primary" href="/{{ year }}/{{ city }}/#tickets">Register Now</a>
+      <a class="nav-link btn btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register Now</a>
     {% endif %}
   </nav>
 </header>
