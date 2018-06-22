@@ -2,7 +2,7 @@
 layout: blank
 ---
 
-{% assign current = site.events | where:"current", true  | first %}
+{% assign current = site.events | where:"current", true | first %}
 
 <script>
   window.location = '{{ current.url | replace: "/index.html", "" }}/'

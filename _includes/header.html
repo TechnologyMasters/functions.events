@@ -1,30 +1,39 @@
-{% assign current = page.url | split: '/' %}
-
-{% assign year = current[1] %}
-{% assign city = current[2] %}
+{% assign url = page.url | split: '/' %}
 {% assign today = site.time | date: '%Y' %}
+{% assign current = site.events | where:"current", true | first %}
+
+{% if url[2] == '' %}
+  {% assign year = url[1] %}
+  {% assign city = url[2] %}
+{% else %}
+  {% assign year = current.date | date: '%Y' %}
+  {% assign city = current.city | downcase %}
+{% endif %}
 
 {% assign speakers = site.speakers | where: "year", year | where: "city", city %}
 {% assign event = site.events | where: "year", year | where: "city", city %}
 
-<header class="d-flex justify-content-between">
+{% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
+
+<header class="d-flex justify-content-between mb-5">
 
   <img src="/images/{{ year }}/icon.svg"/>
 
   <nav class="nav justify-content-center my-auto">
-    <a class="nav-link active" href="/{{ year }}/{{ city }}">Home</a>
+    <a class="nav-link {% if page.url == home %}active{% endif %}" href="{{ home }}">Home</a>
     {% if speakers.size > 0 %}
       <a class="nav-link" href="#speakers">Speakers</a>
       <!-- <a class="nav-link" href="#schedule">Schedule</a> -->
-      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/speakers/">Speakers</a> -->
-      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/schedule/">Schedule</a> -->
+      <!-- <a class="nav-link" href="{{ home }}/speakers/">Speakers</a> -->
+      <!-- <a class="nav-link" href="{{ home }}/schedule/">Schedule</a> -->
     {% endif %}
 
     {% if partners.size > 0 %}
       <a class="nav-link" href="#partners">Partners</a>
-      <!-- <a class="nav-link" href="/{{ year }}/{{ city }}/partners">Partners</a> -->
+      <!-- <a class="nav-link" href="{{ home }}/partners">Partners</a> -->
     {% endif %}
 
+    <a class="nav-link {% if page.url == '/conduct/' %}active{% endif %}" href="/conduct/">Conduct</a>
 
     {% if today > year %}
       <a class="nav-link" href="/events">Future Events</a>
