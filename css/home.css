@@ -1,5 +1,13 @@
 @import "/css/base.css";
 
+header.mb-5 {
+  margin-bottom: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
 h2 {
   text-transform: uppercase;
   font-weight: 700;

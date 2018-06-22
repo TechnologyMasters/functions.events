@@ -5,7 +5,7 @@ layout: blank
 <div class="container d-flex w-100 h-100 p-5 mx-auto flex-column">
   {% include header.html %}
 
-  <main>
+  <main id="{{ page.url | slugify }}" class="my-auto">
     {{ content }}
   </main>
 

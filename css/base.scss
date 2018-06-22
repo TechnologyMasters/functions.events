@@ -5,6 +5,7 @@
   --color-text: #ffffff;
   --color-primary: #1C1E35;
   --color-accent: #0FDBC6;
+  --color-secondary: #ffffff;
   --size-border: .125rem;
   --size-border-radius: .5rem;
 }
@@ -49,6 +50,7 @@ header {
   nav {
     & .nav-link {
       font-weight: 700;
+      text-decoration: none;
       
       &.active,
       &:hover,
@@ -66,6 +68,7 @@ header {
 
 a {
   color: var(--color-text);
+  text-decoration: underline;
 
   &:focus,
   &:hover {
@@ -79,6 +82,16 @@ a {
   color: var(--color-text);
   background-color: var(--color-primary);
   border: var(--size-border) solid var(--color-accent);
+  border-radius: var(--size-border-radius);
+  text-transform: uppercase;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border: var(--size-border) solid var(--color-secondary);
   border-radius: var(--size-border-radius);
   text-transform: uppercase;
 }
