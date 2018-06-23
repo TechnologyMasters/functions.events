@@ -1,9 +1,7 @@
-title: Functions 2018 - Toronto
-description: >-
-  Enabling Creativity, Exploration, Discussion and Learning for Developers creating the
-  future of Function as a Service (FaaS) architecture.
+title: Functions Conf
+description: community focused, single track, one day conference that moves away from the hype and focuses on the reality serverless based solutions
 
-url: https://toronto.functions.events
+url: https://functions.events
 
 collections_dir: _collections
 
@@ -44,7 +42,5 @@ defaults:
       layout: partner
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-redirect-from
-  - jekyll-seo-tag
   - jekyll-sitemap
