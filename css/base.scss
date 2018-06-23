@@ -10,14 +10,6 @@
   --size-border-radius: .5rem;
 }
 
-// :root {
-//   --color-text: #1C1E35;
-//   --color-primary: #ffffff;
-//   --color-accent: #F7991C;
-//   --size-border: .125rem;
-//   --size-border-radius: .5rem;
-// }
-
 @charset "utf-8";
 
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css');
@@ -69,7 +61,7 @@ header {
 
 a {
   color: var(--color-text);
-  text-decoration: underline;
+  text-decoration: none;
 
   &:focus,
   &:hover {
