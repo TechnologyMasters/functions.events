@@ -4,10 +4,6 @@ header.mb-5 {
   margin-bottom: 0 !important;
 }
 
-a {
-  text-decoration: none;
-}
-
 h2 {
   text-transform: uppercase;
   font-weight: 400;
@@ -42,10 +38,6 @@ main {
   font-size: 1.2rem;
 }
 
-.speaker a:hover {
-  text-decoration: none;
-}
-
 .bordered {
   background-clip: padding-box;
 
@@ -69,4 +61,8 @@ main {
 
 .map-content .name {
   font-weight: bold;
+}
+
+.sponsor img {
+  width: 100%;
 }

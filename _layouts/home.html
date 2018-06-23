@@ -6,7 +6,8 @@ layout: blank
 {% assign year = page.date | date: '%Y' %}
 {% assign city = page.city | downcase %}
 
-{% assign speakers = site.speakers | where: "year", year | where: "city", page.city %}
+{% assign speakers = site.speakers | where: "year", year | where: "city", city %}
+{% assign sponsors = site.sponsors | where: "year", year | where: "city", city %}
 
 <main class="container d-flex flex-column w-100 pt-5 mx-auto">
   {% include header.html %}
@@ -25,7 +26,7 @@ layout: blank
             <a href="#tickets" class="btn btn-lg btn-primary btn-block" id="body-ticket">Reserve Your Spot</a>
           </div>
           <div class="col-12 col-sm-6 mb-3">
-            <a href="{{ page.cfp }}" class="btn btn-lg btn-secondary btn-block">Call for Papers</a>
+            <a target="_blank" href="{{ page.cfp }}" class="btn btn-lg btn-secondary btn-block">Call for Papers</a>
           </div>
         </div>
       {% endif %}
@@ -61,6 +62,41 @@ layout: blank
   </div>
 {% endif %}
 
+{% if sponsors.size > 0 %}
+  {% assign bronze = sponsors | where: "level", "gold" %}
+  {% assign silver = sponsors | where: "level", "silver" %}
+  {% assign gold = sponsors | where: "level", "bronze" %}
+
+  <div class="container w-100 my-5">
+    <h2 id="sponsors" class="py-5">Sponsors</h2>
+    <div class="row">
+      {% for sponsor in gold %}
+        <div class="sponsor col-sm-6 my-3">
+          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        </div>
+      {% endfor %}
+
+      {% for sponsor in silver %}
+        <div class="sponsor col-sm-6 my-3">
+          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        </div>
+      {% endfor %}
+
+      {% for sponsor in bronze %}
+        <div class="sponsor col-sm-6 my-3">
+          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- {% if speaker.size > 0 %}
+  <div class="container w-100 my-5">
+    <h2 id="schedule" class="py-5">Schedule</h2>
+  </div>
+{% endif %} -->
+
 {% if page.date >= date and page.eventbrite %}
   <div class="container w-100 h-100 my-5">
     <h2 id="tickets" class="py-5">Tickets</h2>
@@ -78,12 +114,6 @@ layout: blank
         <img class="mr-3" src="partners/{{ partner.slug }}.svg"/>
       </div>
     {% endfor %}
-  </div>
-{% endif %}
-
-{% if speaker.size > 0 %}
-  <div class="container w-100 my-5">
-    <h2 id="schedule" class="py-5">Schedule</h2>
   </div>
 {% endif %}
 

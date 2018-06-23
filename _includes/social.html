@@ -1,4 +1,4 @@
-{% assign title = page.title | default: site.title %}
+{% capture title %}{% if page.title %}{{ page.title }} | {{ site.title }}{% if page.city %} {{ page.year }} {{ page.city }}{% endif %}{% else %}{{ site.title }}{% endif %}{% endcapture %}
 {% assign description = page.description | default: site.description %}
 {% assign current = site.events | where:"current", true | first %}
 
