@@ -2,8 +2,19 @@
 layout: default
 ---
 
-<img src="../speakers/{{ page.slug }}.png"/>
+<div class="row mb-5">
+  <div class="col-3">
+    <img src="/images/{{ page.year }}/{{ page.city | downcase }}/speakers/{{ page.slug }}.png"/>
+  </div>
+  <div class="col-8">
+    <h1>{{ page.name }}</h1>
+    <h2>{{ page.company }}</h2>
+    <p>{{ page.bio }}</p>
+  </div>
+</div>
 
-<h1>{{ page.name }}</h1>
-<h2>{{ page.company }}</h2>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ page.video }}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 <p>{{ content }}</p>

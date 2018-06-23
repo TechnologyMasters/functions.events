@@ -35,6 +35,7 @@
   "@context": "http://schema.org",
   "@type": "Event",
   "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
   "startDate": "{{ current.date }}",
   "location": {
     "@type": "Place",
@@ -50,7 +51,6 @@
   },
   "image": [
     "{{ site.url }}/images/banner.png?time={{ site.time | date_to_xmlschema }}"
-   ],
-  "description": "{{ site.description }}"
+  ]
 }
 </script>

@@ -54,8 +54,7 @@ layout: blank
       {% for speaker in speakers %}
         <div class="speaker col-sm-4 my-3">
           <img class="mr-3" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.png"/>
-          <!-- <a href="{{ speaker.url }}">{{ speaker.name }}</a> -->
-          {{ speaker.name }}
+          <a href="{{ speaker.url }}">{{ speaker.name }}</a>
         </div>
       {% endfor %}
     </div>
