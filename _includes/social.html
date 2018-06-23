@@ -1,5 +1,6 @@
 {% assign title = page.title | default: site.title %}
 {% assign description = page.description | default: site.description %}
+{% assign current = site.events | where:"current", true | first %}
 
 <title>{{ title }}</title>
 
@@ -28,3 +29,28 @@
 <meta name="og:site_name" content="{{ site.title }}"/>
 <meta name="fb:admins" content="227304446"/>
 <meta name="og:type" content="website"/>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "{{ site.name }}",
+  "startDate": "{{ current.date }}",
+  "location": {
+    "@type": "Place",
+    "name": "{{ current.venue.name }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ current.venue.address.street }}",
+      "addressLocality": "{{ current.venue.address.city }}",
+      "postalCode": "{{ current.venue.address.postal }}",
+      "addressRegion": "{{ current.venue.address.region }}",
+      "addressCountry": "{{ current.venue.address.country }}"
+    }
+  },
+  "image": [
+    "{{ site.url }}/images/banner.png"
+   ],
+  "description": "{{ site.description }}"
+}
+</script>
