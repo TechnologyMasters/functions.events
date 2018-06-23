@@ -34,6 +34,7 @@ body {
   background-attachment: fixed;
   background-size: initial;
   background-position: calc(100% + 90px) calc(100% + 50px);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -84,6 +85,12 @@ a {
   border: var(--size-border) solid var(--color-accent);
   border-radius: var(--size-border-radius);
   text-transform: uppercase;
+  box-shadow: none !important;
+}
+
+.btn-primary:active {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
 }
 
 .btn-secondary,
@@ -94,4 +101,10 @@ a {
   border: var(--size-border) solid var(--color-secondary);
   border-radius: var(--size-border-radius);
   text-transform: uppercase;
+  box-shadow: none !important;
+}
+
+.btn-secondary:active {
+  background-color: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
 }
