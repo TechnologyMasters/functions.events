@@ -12,4 +12,4 @@ eventbrite: 47131227771
 cfp: https://www.papercall.io/serverless-to-2018
 ---
 
-Functions 2018 is a **community focused, single track, one day conference** that moves away from the hype and focuses on the reality serverless based solutions. It's about fostering a community locally and helping all of us learn from each other as we embrace a new way of building applications.
+Functions 2018 is a **community focused, single track, one day conference** that moves away from the hype and focuses on the reality of serverless based solutions. It's about fostering a community locally and helping all of us learn from each other as we embrace a new way of building applications.
