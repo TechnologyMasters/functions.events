@@ -6,10 +6,4 @@
   {% include social.html %}
 
   <link rel="stylesheet" href="/css/{{ page.layout }}.css?time={{ site.time | date_to_xmlschema }}"/>
-
-  {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-  {% endif %}
-
-  <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 </head>
