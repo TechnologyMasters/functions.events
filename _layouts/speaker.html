@@ -2,13 +2,14 @@
 layout: default
 ---
 
-<div class="row mb-5">
-  <div class="col-3">
+<div class="row my-5">
+  <div class="photo col-sm-3 mb-4">
     <img src="/images/{{ page.year }}/{{ page.city | downcase }}/speakers/{{ page.slug }}.png"/>
   </div>
-  <div class="col-8">
+
+  <div class="col-sm-8">
     <h1>{{ page.name }}</h1>
-    <h2>{{ page.company }}</h2>
+    <h2 class="mb-4">{{ page.company }}</h2>
     <p>{{ page.bio }}</p>
   </div>
 </div>
