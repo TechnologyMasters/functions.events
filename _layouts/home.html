@@ -56,10 +56,10 @@ layout: blank
     <h2 id="speakers" class="py-5">Speakers</h2>
     <div class="row">
       {% for speaker in speakers %}
-        <div class="speaker col-sm-4 my-3">
-          <a href="{{ speaker.url }}">
-            <img class="mr-3" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.png"/>
-            <span>{{ speaker.name }}</span>
+        <div class="speaker col-6 col-sm-6 col-md-3 my-3">
+          <a href="{{ speaker.url }}" class="d-flex flex-column align-items-center text-center">
+            <div class="hex photo-border"><img class="photo" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.jpg"/></div>
+            <p>{{ speaker.name }}<br/><span>{{ speaker.company }}</span></p>
           </a>
         </div>
       {% endfor %}
@@ -100,14 +100,22 @@ layout: blank
   <div class="container w-100 my-5">
     <h2 id="schedule" class="py-5">Schedule</h2>
 
-    <table>
+    <table class="agenda">
       {% for item in page.schedule %}
         {% assign speaker = speakers | where: "slug", item.speaker | first %}
         <tr>
-          <td >{{ item.time | date: "%I:%M %p" }}</td>
+          <td width="140" class="d-none d-sm-table-cell"><time>{{ item.time | date: "%I:%M %p" }}</time></td>
+          <td class="d-none d-md-table-cell">
+            {% if speaker %}
+              <a href="{{ speaker.url }}"><img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.jpg"/></a>
+            {% else %}
+              <img class="hex" src="/images/{{ year }}/icon-fill.png"/>
+            {% endif %}
+          </td>
           <td>
+            <time class="d-sm-none">{{ item.time | date: "%I:%M %p" }}</time>
             {% if speaker %}<a href="{{ speaker.url }}"><span>{{ speaker.name }}</span></a>{% endif %}
-            {% if item.title %}{{ item.title }}{% else %}<a href="{{ speaker.url }}">{{ speaker.talk }}</a>{% endif %}
+            {% if speaker %}<a href="{{ speaker.url }}">{{ speaker.talk }}</a>{% else %}{{ item.title }}{% endif %}
           </td>
         </tr>
       {% endfor %}

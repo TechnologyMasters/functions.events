@@ -1,6 +1,10 @@
 ---
 ---
 
+:root {
+  --color-avatars: #8b8c8d;
+}
+
 @import "/css/base.css";
 
 header.mb-5 {
@@ -14,15 +18,41 @@ h2 {
 }
 
 table {
-  &.schedule td {
-    font-weight: 700 !important;
-    padding: 1rem;
-    text-transform: uppercase;
-    border: var(--size-border) solid var(--color-text);
+
+  &.schedule {
+    td {
+      font-weight: 700 !important;
+      padding: 1rem;
+      text-transform: uppercase;
+      border: var(--size-border) solid var(--color-text);
+    }
+  }
+
+  &.agenda {
+    width: 100%;
+
+    tr {
+      border-bottom: 1px solid var(--color-accent);
+    }
+
+    td {
+      padding: 1rem 2rem 1rem 0;
+      vertical-align: middle;
+
+      time {
+        display: block;
+        font-weight: 300;
+      }
+
+      img {
+        vertical-align: bottom;
+        height: 4rem;
+        width: auto;
+      }
+    }
   }
 
   td {
-    padding: 1rem 2rem 1rem 0;
     font-size: 1.5rem;
     vertical-align: bottom;
 
@@ -42,14 +72,28 @@ main {
   min-height: 100%;
 }
 
-.partner img,
-.speaker img {
-  height: 4rem;
+.speaker {
+  .photo-border {
+    background-color: var(--color-avatars);
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  span {
+    font-weight: 300;
+  }
 }
 
-.speaker a {
-  font-size: 1.2rem;
-}
 
 .bordered {
   background-clip: padding-box;

@@ -104,6 +104,10 @@ a {
   border-color: var(--color-secondary) !important;
 }
 
+.hex {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
 @media (min-width: 576px) {
   header nav {
     width: initial;
