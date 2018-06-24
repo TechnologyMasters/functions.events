@@ -36,7 +36,7 @@
       {% endif %}
     {% endif %}
     
-    <a class="nav-link" href="/events">{% if today > year %}Future Events{% else %}Past Events{% endif %}</a>
+    <a class="nav-link" href="/events">{% if url[2] or today > year %}Future Events{% else %}Past Events{% endif %}</a>
 
     {% if year >= today %}
       <a class="nav-link btn btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register Now</a>

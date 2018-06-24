@@ -54,10 +54,6 @@ header {
         color: var(--color-accent);
       }
     }
-
-    .nav-link + .nav-link:not(:last-of-type) {
-      margin-right: 1rem;
-    }
   }
 }
 
@@ -107,5 +103,9 @@ a {
 @media (min-width: 576px) {
   header nav {
     width: initial;
+
+    .nav-link:not(:last-of-type) {
+      margin-right: 1rem;
+    }
   }
 }
