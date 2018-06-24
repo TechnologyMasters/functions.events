@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.photo img {
+  max-width: 100%;
+}
+
+
 h1, h2 {
   font-weight: 300;
   text-align: center;
