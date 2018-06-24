@@ -8,6 +8,7 @@ layout: blank
 
 {% assign speakers = site.speakers | where: "year", year | where: "city", city %}
 {% assign sponsors = site.sponsors | where: "year", year | where: "city", city %}
+{% assign partners = site.partners | where: "year", year | where: "city", city %}
 
 <main class="container d-flex flex-column w-100 pt-5 mx-auto">
   {% include header.html %}
@@ -109,11 +110,13 @@ layout: blank
   <div class="container w-100 my-5">
     <h2 id="partners" class="py-5">Partners</h2>
 
-    {% for partner in site.partners %}
-      <div class="partner col-sm-4 my-3">
-        <img class="mr-3" src="partners/{{ partner.slug }}.svg"/>
-      </div>
-    {% endfor %}
+    <div class="row">
+      {% for partner in site.partners %}
+        <div class="partner col-sm-2 my-3">
+          <a href="{{ partner.link }}"><img src="/images/{{ year }}/{{ city }}/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
 
@@ -140,7 +143,7 @@ layout: blank
 
       // Optional
       iframeContainerHeight: 500,
-      onOrderComplete: () => console.log('Order complete!')
+      // onOrderComplete: () => console.log('Order complete!')
     })
   </script>
 {% endif %}

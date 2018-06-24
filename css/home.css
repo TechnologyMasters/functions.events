@@ -63,6 +63,15 @@ main {
   font-weight: bold;
 }
 
-.sponsor img {
+.sponsor,
+.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor img,
+.partner img {
   width: 100%;
+  height: auto;
 }
