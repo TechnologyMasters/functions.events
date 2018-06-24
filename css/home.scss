@@ -1,0 +1,99 @@
+---
+---
+
+@import "/css/base.css";
+
+header.mb-5 {
+  margin-bottom: 0 !important;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5rm;
+}
+
+table {
+  &.schedule td {
+    font-weight: 700 !important;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: var(--size-border) solid var(--color-text);
+  }
+
+  td {
+    padding: 1rem 2rem 1rem 0;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+
+    &:first-of-type {
+      font-weight: 300;
+    }
+
+    span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}
+
+main {
+  min-height: 100%;
+}
+
+.partner img,
+.speaker img {
+  height: 4rem;
+}
+
+.speaker a {
+  font-size: 1.2rem;
+}
+
+.bordered {
+  background-clip: padding-box;
+
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 5px #293463,
+    0 0 0 10px #325b88,
+    0 0 0 15px #533264,
+    0 0 0 20px #423163
+}
+
+.map-content {
+  color: var(--color-primary);
+
+  a {
+    color: inherit;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+}
+
+.sponsor,
+.partner {
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .sponsor,
+  .partner, {
+    img {
+      width: 75%;
+    }
+  }
+}

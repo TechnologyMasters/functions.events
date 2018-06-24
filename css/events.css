@@ -1,11 +1,14 @@
 @import "/css/base.css";
 
-img {
-  width: 50%;
+.row {
+  justify-content: center
 }
 
-a,
-a:focus,
-a:hover {
-  color: inherit;
+.event {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+img {
+  width: 100%;
 }

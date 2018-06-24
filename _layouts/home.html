@@ -34,9 +34,9 @@ layout: blank
     </section>
 
     <section class="col-12 offset-lg-1 col-lg-4 offset-xl-1 col-xl-3">
-      <table class="w-100">
+      <table class="schedule w-100">
         <tr>
-          <td><span>{{ page.date | date: "%A" }}</span>{{ page.date | date: "%d - %b - %Y" }}</td>
+          <td><span><a href="#schedule">{{ page.date | date: "%A" }}</span>{{ page.date | date: "%d - %b - %Y" }}</a></td>
         </tr>
         <tr>
           <td colspan="2"><span>Canada</span>{{ page.city }}</td>
@@ -72,31 +72,44 @@ layout: blank
     <h2 id="sponsors" class="py-5">Sponsors</h2>
     <div class="row">
       {% for sponsor in gold %}
-        <div class="sponsor col-sm-6 my-3">
-          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        <div class="sponsor col-sm-6 my-5">
+          <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
 
       {% for sponsor in silver %}
-        <div class="sponsor col-sm-6 my-3">
-          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        <div class="sponsor col-sm-6 my-5">
+          <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
 
       {% for sponsor in bronze %}
-        <div class="sponsor col-sm-6 my-3">
-          <img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/>
+        <div class="sponsor col-sm-6 my-5">
+          <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
     </div>
   </div>
 {% endif %}
 
-<!-- {% if speaker.size > 0 %}
+{% if page.schedule %}
   <div class="container w-100 my-5">
     <h2 id="schedule" class="py-5">Schedule</h2>
+
+    <table>
+      {% for item in page.schedule %}
+        {% assign speaker = speakers | where: "slug", item.speaker | first %}
+        <tr>
+          <td >{{ item.time | date: "%I:%M %p" }}</td>
+          <td>
+            {% if speaker %}<a href="{{ speaker.url }}"><span>{{ speaker.name }}</span></a>{% endif %}
+            {% if item.title %}{{ item.title }}{% else %}<a href="{{ speaker.url }}">{{ speaker.talk }}</a>{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
   </div>
-{% endif %} -->
+{% endif %}
 
 {% if page.date >= date and page.eventbrite %}
   <div class="container w-100 h-100 my-5">
@@ -110,9 +123,9 @@ layout: blank
   <div class="container w-100 my-5">
     <h2 id="partners" class="py-5">Partners</h2>
 
-    <div class="row">
+    <div class="row align-items-center">
       {% for partner in site.partners %}
-        <div class="partner col-sm-2 my-3">
+        <div class="partner col-sm-2 my-5">
           <a href="{{ partner.link }}"><img src="/images/{{ year }}/{{ city }}/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}

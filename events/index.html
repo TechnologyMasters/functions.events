@@ -2,11 +2,15 @@
 layout: events
 ---
 
-{% for event in site.events reversed %}
-  {% assign link = event.url | replace: "/index.html", "" %}
-  {% if event.date %}
-    <a href="{{ link }}">
-      <img src="/images/{{ event.date | date: '%Y' }}/{{ event.city | downcase }}/logo.svg"/>
-    </a>
-  {% endif %}
-{% endfor %}
+<div class="row">
+  {% for event in site.events reversed %}
+    {% assign link = event.url | replace: "/index.html", "" %}
+    {% if event.date %}
+      <div class="event col-12 col-sm-10">
+        <a href="{{ link }}">
+          <img src="/images/{{ event.date | date: '%Y' }}/{{ event.city | downcase }}/logo.svg"/>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
