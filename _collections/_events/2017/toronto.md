@@ -10,42 +10,63 @@ eventbrite: 35394300305
 cfp: https://github.com/functions-conf/contributing/
 schedule:
   - time: 09:00Z
+    type: agenda
     title: Doors Open & Breakfast
 
   - time: 09:50Z
+    type: agenda
     title: Kickoff & Opening Notes
 
   - time: 10:00Z
+    type: talk
     speaker: kassandra-perch
 
   - time: 10:45Z
+    type: talk
     speaker: keith-horwood
 
   - time: 11:30Z
+    type: talk
     speaker: joe-raio
 
   - time: 12:15Z
+    type: agenda
     title: Lunch Break
 
   - time: 01:00Z
+    type: talk
     speaker: chris-munns
 
   - time: 01:45Z
+    type: talk
     speaker: adib-saikali
 
   - time: 02:30Z
+    type: agenda
     title: Break + Lighning Talks
 
+  - time: 02:30Z
+    type: talk
+    speaker: adrian-maurer
+
+  - time: 02:45Z
+    type: talk
+    speaker: darcy-clarke
+
   - time: 03:00Z
+    type: talk
     speaker: daniel-krook
 
   - time: 03:00Z
+    type: talk
     speaker: sandeep-dinesh
 
   - time: 04:30Z
-    title: "Panel: A Serverless World!"
+    type: panel
+    panel: serverless-world
 
   - time: 05:00Z
+    type: agenda
     title: Network & Drinks
 ---
 

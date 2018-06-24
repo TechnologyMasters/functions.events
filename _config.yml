@@ -21,12 +21,16 @@ collections:
     output: true
     permalink: /:path/
 
-  partners:
+  panels:
     output: true
     permalink: /:path/
 
+  partners:
+    output: false
+    permalink: /:path/
+
   sponsors:
-    output: true
+    output: false
     permalink: /:path/
 
 defaults:
@@ -41,9 +45,9 @@ defaults:
       layout: speaker
 
   - scope:
-      type: partners
+      type: panels
     values:
-      layout: partner
+      layout: panel
 
 plugins:
   - jekyll-redirect-from
