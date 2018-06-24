@@ -55,8 +55,10 @@ layout: blank
     <div class="row">
       {% for speaker in speakers %}
         <div class="speaker col-sm-4 my-3">
-          <img class="mr-3" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.png"/>
-          <a href="{{ speaker.url }}">{{ speaker.name }}</a>
+          <a href="{{ speaker.url }}">
+            <img class="mr-3" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.png"/>
+            <span>{{ speaker.name }}</span>
+          </a>
         </div>
       {% endfor %}
     </div>
