@@ -10,10 +10,15 @@ permalink: /contact/
 
 If you are being harassed, notice that someone else is being harassed, or have other concerns, such as observing that a member of the TechMasters community is violating any part of our [Code of Conduct](./conduct.md), please contact any of our administrators immediately:
 
-Name                 | Slack                       | Twitter                        | Email                   
--------------------- | --------------------------- | ------------------------------ | ------------------------
-**Ahmad Nassri**     | [@AhmadNassri][slack-ahmad] | [@AhmadNassri][twitter-ahmad]  | [ahmad@techmasters.email](mailto:ahmad@techmasters.email)
-**Enrico Sacchetti** | [@enrico][slack-enrico]     | [@EnricoTrain][twitter-enrico] | [enrico@techmasters.email](mailto:enrico@techmasters.email)
+#### Ahmad Nassri
+- **Slack:** _[@AhmadNassri][slack-ahmad]_
+- **Twitter:** _[@AhmadNassri][twitter-ahmad]_
+- **Email:** _[ahmad@techmasters.email](mailto:ahmad@techmasters.email)_
+
+#### Enrico Sacchetti
+- **Slack:** _[@enrico][slack-enrico]_
+- **Twitter:** _[@EnricoTrain][twitter-enrico]_
+- **Email:** _[enrico@techmasters.email](mailto:enrico@techmasters.email)_
 
 ### In Person
 
@@ -23,12 +28,12 @@ If you need to contact us in person at an event, we will identify ourselves at t
 
 ## General Contact / Comments / Questions?
 
-### Twitter
+#### Twitter
 
 - [@FunctionsConf][twitter-functions]
 - [@TechMasters][twitter-techmasters]
 
-### Email
+#### Email
 
 - Functions Conference Inquiries: [functions@techmasters.email](mailto:functions@techmasters.email)
 - TechMasters Inquiries: [contact@techmasters.email](mailto:contact@techmasters.email)
