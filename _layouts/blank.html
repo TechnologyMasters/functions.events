@@ -10,5 +10,8 @@
     {% if jekyll.environment == 'production' %}
       {% include analytics.html %}
     {% endif %}
+
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"a41aeaf0cf76aaf98b8e17255","lid":"47e0c35a61"}) })</script>
   </body>
 </html>
