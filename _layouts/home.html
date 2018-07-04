@@ -130,7 +130,7 @@ layout: blank
             {% else %}
               {{ item.title }}
             {% endif %}
-            
+
           </td>
         </tr>
       {% endfor %}
@@ -151,9 +151,9 @@ layout: blank
     <h2 id="partners" class="py-5">Partners</h2>
 
     <div class="row align-items-center">
-      {% for partner in site.partners %}
+      {% for partner in partners %}
         <div class="partner col-sm-2 my-5">
-          <a href="{{ partner.link }}"><img src="/images/{{ year }}/{{ city }}/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
+          <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}
     </div>
