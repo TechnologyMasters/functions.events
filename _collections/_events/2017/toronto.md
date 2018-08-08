@@ -33,39 +33,39 @@ schedule:
     type: agenda
     title: Lunch Break
 
-  - time: 01:00Z
+  - time: 13:00Z
     type: talk
     speaker: chris-munns
 
-  - time: 01:45Z
+  - time: 13:45Z
     type: talk
     speaker: adib-saikali
 
-  - time: 02:30Z
+  - time: 14:30Z
     type: agenda
     title: Break + Lighning Talks
 
-  - time: 02:30Z
+  - time: 14:30Z
     type: talk
     speaker: adrian-maurer
 
-  - time: 02:45Z
+  - time: 14:45Z
     type: talk
     speaker: darcy-clarke
 
-  - time: 03:00Z
+  - time: 15:00Z
     type: talk
     speaker: daniel-krook
 
-  - time: 03:00Z
+  - time: 15:00Z
     type: talk
     speaker: sandeep-dinesh
 
-  - time: 04:30Z
+  - time: 16:30Z
     type: panel
     panel: serverless-world
 
-  - time: 05:00Z
+  - time: 17:00Z
     type: agenda
     title: Network & Drinks
 ---
