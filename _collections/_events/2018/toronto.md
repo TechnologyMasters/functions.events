@@ -15,59 +15,75 @@ schedule:
     type: agenda
     title: Doors Open & Breakfast
 
-  - time: 08:45Z
+  - time: 09:00Z
     type: agenda
     title: Kickoff & Opening Notes
 
-  - time: 09:00Z
+  - time: 09:10Z
     type: talk
     speaker: keith-horwood
 
-  - time: 09:45Z
+  - time: 09:50Z
     type: placeholder
     title: TBD
+    speaker: nicholas-gottlieb
 
   - time: 10:30Z
     type: agenda
     title: Morning Break
 
-  - time: 10:45Z
+  - time: 10:40Z
     type: placeholder
     title: TBD
+    speaker: lily-li
 
-  - time: 11:30Z
+  - time: 11:20Z
     type: placeholder
     title: TBD
+    speaker: william-blankenship
 
-  - time: 12:15Z
+  - time: 12:00Z
     type: agenda
     title: Lunch Break
 
   - time: 13:00Z
-    type: talk
-    speaker: jay-v
-
-  - time: 13:45Z
     type: placeholder
     title: TBD
+    speaker: simona-cotin
 
-  - time: 14:30Z
+  - time: 13:40Z
     type: placeholder
     title: TBD
+    speaker: brian-leroux
 
-  - time: 15:15Z
+  - time: 14:20Z
     type: agenda
     title: Afternoon Break
 
-  - time: 15:30Z
+  - time: 14:30Z
+    type: talk
+    speaker: jay-v
+
+  - time: 15:10Z
     type: placeholder
     title: TBD
+    speaker: bret-mcgowen
 
-  - time: 16:15Z
+  - time: 15:50Z
+    type: agenda
+    title: Last Break
+
+  - time: 16:00Z
     type: placeholder
     title: TBD
+    speaker: soam-vasani
 
-  - time: 17:00Z
+  - time: 16:40Z
+    type: placeholder
+    title: TBD
+    speaker: luis-eduardo-colon
+
+  - time: 17:20Z
     type: agenda
     title: Closing Remarks
 
