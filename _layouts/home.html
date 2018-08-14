@@ -82,7 +82,7 @@ layout: blank
     <h2 id="sponsors" class="py-5">Sponsors</h2>
     <div class="row">
       {% for sponsor in gold %}
-        <div class="sponsor col-sm-5 {% if forloop.index > 1 %}offset-1{% endif %} my-5">
+        <div class="sponsor col-sm-5 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
@@ -90,7 +90,7 @@ layout: blank
 
     <div class="row">
       {% for sponsor in silver %}
-        <div class="sponsor col-sm-3 {% if forloop.index > 1 %}offset-1{% endif %} my-5">
+        <div class="sponsor col-sm-3 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
@@ -98,7 +98,7 @@ layout: blank
 
     <div class="row">
       {% for sponsor in bronze %}
-        <div class="sponsor col-sm-2 {% if forloop.index > 1 %}offset-1{% endif %} my-5">
+        <div class="sponsor col-sm-2 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
