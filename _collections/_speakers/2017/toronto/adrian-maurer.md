@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Adrian Maurer
 company: CGI
 talk: Testing Only In Production Using Algebraic Properties

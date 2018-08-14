@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Stuart Charlton
 company: Pivotal
 talk: Spring Cloud Function & infrastructure models

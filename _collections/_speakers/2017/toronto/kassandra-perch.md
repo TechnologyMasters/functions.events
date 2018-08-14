@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Kassandra Perch
 company: IOpipe
 talk: FaaS Tooling - Where We're At and Signs of Change

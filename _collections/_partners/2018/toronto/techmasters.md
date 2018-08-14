@@ -1,6 +1,5 @@
 ---
-year: 2018
-city: toronto
+edition: 2018-toronto
 name: TechMasters
 link: https://techmasters.chat
 ---

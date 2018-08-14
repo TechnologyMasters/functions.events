@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Sandeep Dinesh
 company: Google
 talk: Building serverless applications with Apache OpenWhisk

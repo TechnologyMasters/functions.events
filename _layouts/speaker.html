@@ -2,15 +2,17 @@
 layout: default
 ---
 
+{% assign edition = page.edition | split: '-' %}
+
 <div class="row my-5">
   <div class="photo col-sm-3 mb-4">
-    <img class="hex" src="/images/{{ page.year }}/{{ page.city | downcase }}/speakers/{{ page.slug }}.jpg"/>
+    <img class="hex" src="/images/{{ edition[0] }}/{{ edition[1] }}/speakers/{{ page.slug }}.jpg"/>
   </div>
 
   <div class="col-sm-8">
     <h1>{{ page.name }}</h1>
     <h2 class="mb-4">{{ page.company }}</h2>
-    <p>{{ page.bio }}</p>
+    {{ page.bio | markdownify }}
   </div>
 </div>
 

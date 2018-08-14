@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Darcy Clarke
 company: JS Foundation
 talk: Standardizing Serverless Deployments with Architect

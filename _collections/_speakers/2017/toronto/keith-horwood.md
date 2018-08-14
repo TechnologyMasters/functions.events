@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Keith Horwood
 company: stdlib
 talk: Developer Velocity - Introduction to Functions-First Development

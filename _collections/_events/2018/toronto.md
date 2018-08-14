@@ -33,9 +33,10 @@ schedule:
     title: Morning Break
 
   - time: 10:40Z
-    type: placeholder
-    title: TBD
-    speaker: lily-li
+    type: talk
+    speakers: 
+      - lily-li
+      - christian-zommerfelds
 
   - time: 11:20Z
     type: placeholder
@@ -47,8 +48,7 @@ schedule:
     title: Lunch Break
 
   - time: 13:00Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: simona-cotin
 
   - time: 13:40Z
@@ -62,7 +62,9 @@ schedule:
 
   - time: 14:30Z
     type: talk
-    speaker: jay-v
+    speakers: 
+      - frank-wang
+      - jay-v
 
   - time: 15:10Z
     type: placeholder

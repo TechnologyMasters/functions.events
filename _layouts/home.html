@@ -5,11 +5,12 @@ layout: blank
 {% assign date = site.time %}
 {% assign year = page.date | date: '%Y' %}
 {% assign city = page.city | downcase %}
+{% assign edition = year | append: '-' | append: city %}
 
-{% assign panels = site.panels | where: "year", year | where: "city", city %}
-{% assign speakers = site.speakers | where: "year", year | where: "city", city %}
-{% assign sponsors = site.sponsors | where: "year", year | where: "city", city %}
-{% assign partners = site.partners | where: "year", year | where: "city", city %}
+{% assign panels = site.panels | where: "edition", edition %}
+{% assign sponsors = site.sponsors | where: "edition", edition %}
+{% assign partners = site.partners | where: "edition", edition %}
+{% assign speakers = site.speakers | where: "edition", edition %}
 
 <main class="container d-flex flex-column w-100 pt-5 mx-auto">
   {% include header.html %}
@@ -59,7 +60,8 @@ layout: blank
   <div class="container w-100 my-5">
     <h2 id="speakers" class="py-5">Speakers</h2>
     <div class="row">
-      {% for speaker in speakers %}
+      {% assign announced = speakers | where: "announced", true %}
+      {% for speaker in announced %}
         <div class="speaker col-6 col-sm-6 col-md-3 my-3">
           <a href="{{ speaker.url }}" class="d-flex flex-column align-items-center text-center">
             <div class="hex photo-border"><img class="photo" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.jpg"/></div>
@@ -116,7 +118,14 @@ layout: blank
           <td width="140" class="d-none d-sm-table-cell"><time>{{ item.time | date: "%I:%M %p" }}</time></td>
           <td class="d-none d-md-table-cell">
             {% if item.type == 'talk' %}
-              <a href="{{ speaker.url }}"><img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.jpg"/></a>
+              {% if item.speakers %}
+                {% assign first = speakers | where: "slug", item.speakers[0] | first %}
+                {% assign second = speakers | where: "slug", item.speakers[1] | first %}
+                <a href="{{ first.url }}"><img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ first.slug }}.jpg"/></a>
+                <!-- <a href="{{ second.url }}"><img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ second.slug }}.jpg"/></a> -->
+              {% else %}
+                <a href="{{ speaker.url }}"><img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ speaker.slug }}.jpg"/></a>
+              {% endif %}
             {% elsif item.type == 'panel' %}
               <a href="{{ panel.url }}"><img class="hex" src="/images/{{ year }}/icon-fill.png"/></a>
             {% else %}
@@ -126,15 +135,21 @@ layout: blank
           <td>
             <time class="d-sm-none">{{ item.time | date: "%I:%M %p" }}</time>
             {% if item.type == 'talk' %}
-              <a href="{{ speaker.url }}"><span>{{ speaker.name }}</span></a>
-              <a href="{{ speaker.url }}">{{ speaker.talk }}</a>
+              {% if item.speakers %}
+                {% assign first = speakers | where: "slug", item.speakers[0] | first %}
+                {% assign second = speakers | where: "slug", item.speakers[1] | first %}
+                <span><a href="{{ first.url }}">{{ first.name }}</a> & <a href="{{ second.url }}">{{ second.name }}</a></span>
+                <a href="{{ speaker.url }}">{{ first.talk }}</a>
+              {% else %}
+                <a href="{{ speaker.url }}"><span>{{ speaker.name }}</span></a>
+                <a href="{{ speaker.url }}">{{ speaker.talk }}</a>
+              {% endif %}
             {% elsif item.type == 'panel' %}
               <a href="{{ panel.url }}"><span>Panel</span></a>
               <a href="{{ panel.url }}">{{ panel.title }}</a>
             {% else %}
               {{ item.title }}
             {% endif %}
-
           </td>
         </tr>
       {% endfor %}

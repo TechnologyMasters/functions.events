@@ -1,6 +1,6 @@
 ---
-year: 2017
-city: toronto
+announced: true
+edition: 2017-toronto
 name: Chris Munns
 company: Amazon Web Services
 talk: Twelve Factor Serverless Applications

@@ -2,16 +2,20 @@
 layout: default
 ---
 
+{% assign speakers = site.speakers | where: "edition", page.edition %}
+{% assign edition = page.year | append: '-' | append: page.city %}
+{% assign edition = page.edition | split: '-' %}
+
 <div class="my-5">
   <h1>Panel</h1>
   <h2>{{ page.title }}</h2>
 
   <div class="row">
     {% for name in page.panelists %}
-      {% assign speaker = site.speakers | where: "year", page.year | where: "city", page.city | where: "name", name | first %}
+      {% assign speaker = speakers | where: "slug", name | first %}
       <div class="speaker col-6 col-sm-6 col-md-2 my-3">
         <a href="{{ speaker.url }}" class="d-flex flex-column align-items-center text-center">
-          <img class="hex" src="/images/{{ page.year }}/{{ page.city }}/speakers/{{ speaker.slug }}.jpg"/>
+          <img class="hex" src="/images/{{ edition[0] }}/{{ edition[1] }}/speakers/{{ name }}.jpg"/>
           <p>{{ speaker.name }}<br/><span>{{ speaker.company }}</span></p>
         </a>
       </div>

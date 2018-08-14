@@ -1,6 +1,5 @@
 ---
-year: 2018
-city: toronto
+edition: 2018-toronto
 name: Seed
 link: https://seed.run/
 ---

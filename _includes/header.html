@@ -10,9 +10,11 @@
   {% assign city = event.city | downcase %}
 {% endif %}
 
-{% assign partners = site.partners | where: "year", year | where: "city", city %}
-{% assign speakers = site.speakers | where: "year", year | where: "city", city %}
-{% assign sponsors = site.sponsors | where: "year", year | where: "city", city %}
+{% assign edition = year | append: '-' | append: city %}
+
+{% assign sponsors = site.sponsors | where: "edition", edition %}
+{% assign partners = site.partners | where: "edition", edition %}
+{% assign speakers = site.speakers | where: "edition", edition %}
 
 {% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
 
@@ -35,7 +37,7 @@
         <a class="nav-link" href="/{{ year }}/{{ city }}/#partners">Partners</a>
       {% endif %}
     {% endif %}
-    
+
     <a class="nav-link" href="/events">{% if today > year %}Future Events{% else %}Past Events{% endif %}</a>
 
     {% if year >= today %}
