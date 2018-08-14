@@ -24,8 +24,7 @@ schedule:
     speaker: keith-horwood
 
   - time: 09:50Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: nicholas-gottlieb
 
   - time: 10:30Z
@@ -48,7 +47,7 @@ schedule:
     title: Lunch Break
 
   - time: 13:00Z
-    type: talk
+    type: placeholder
     speaker: simona-cotin
 
   - time: 13:40Z
@@ -81,9 +80,8 @@ schedule:
     speaker: soam-vasani
 
   - time: 16:40Z
-    type: placeholder
-    title: TBD
-    speaker: luis-eduardo-colon
+    type: talk
+    speaker: chris-munns
 
   - time: 17:20Z
     type: agenda
