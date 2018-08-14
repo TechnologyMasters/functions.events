@@ -16,10 +16,12 @@ layout: default
   </div>
 </div>
 
+<h2>{{ page.talk }}</h2>
+<div class="mt-5">{{ content }}</div>
+
 {% if page.video %}
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ page.video }}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 {% endif %}
 
-<div class="mt-5">{{ content }}</div>
