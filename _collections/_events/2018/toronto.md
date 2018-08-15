@@ -38,8 +38,7 @@ schedule:
       - christian-zommerfelds
 
   - time: 11:20Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: william-blankenship
 
   - time: 12:00Z
