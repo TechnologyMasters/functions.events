@@ -1,5 +1,5 @@
-{% capture title %}{% if page.title %}{{ page.title }} | {{ site.title }}{% if page.city %} {{ page.year }} {{ page.city }}{% endif %}{% else %}{{ site.title }}{% endif %}{% endcapture %}
-{% assign description = page.description | default: site.description %}
+{% capture title %}{% if page.title %}{{ page.title }} | {{ site.title }}{% if page.city %} {{ page.year }}{% endif %}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture description %}{% if page.talk %}{{ page.talk }}{% else %}{{ page.description | default: site.description }}{% endif %}{% endcapture %}
 {% assign current = site.events | where:"current", true | first %}
 
 {% if page.layout == 'speaker' %}
