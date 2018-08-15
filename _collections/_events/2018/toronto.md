@@ -48,6 +48,7 @@ schedule:
 
   - time: 13:00Z
     type: placeholder
+    title: TBD
     speaker: simona-cotin
 
   - time: 13:40Z
@@ -66,8 +67,7 @@ schedule:
       - jay-v
 
   - time: 15:10Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: bret-mcgowen
 
   - time: 15:50Z
