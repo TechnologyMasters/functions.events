@@ -2,16 +2,28 @@
 {% assign description = page.description | default: site.description %}
 {% assign current = site.events | where:"current", true | first %}
 
+{% if page.layout == 'speaker' %}
+  {% assign edition = page.edition | split: '-' %}
+  {% assign speaker = "images/" | append: edition[0] | append: "/" | append: edition[1] | append: "/speakers/" | append: page.slug | append: "-social.jpg" %}
+  {% assign banner = speaker %}
+  {% assign twitter = speaker %}
+  {% assign facebook = speaker %}
+{% else %}
+  {% assign banner = "images/banner.png" %}
+  {% assign twitter = "images/twitter.png" %}
+  {% assign facebook = "images/open-graph.png" %}
+{% endif %}
+
 <title>{{ title }}</title>
 
 <!-- SEO -->
 <meta name="description" content="{{ description }}"/>
-<meta name="image" content="{{ site.url }}/images/banner.png?time={{ site.time | date_to_xmlschema }}"/>
+<meta name="image" content="{{ site.url }}/{{ banner }}?time={{ site.time | date_to_xmlschema }}"/>
 
 <!-- Schema.org for Google -->
 <meta itemprop="name" content="{{ title }}"/>
 <meta itemprop="description" content="{{ description }}"/>
-<meta itemprop="image" content="{{ site.url }}/images/banner.png?time={{ site.time | date_to_xmlschema }}"/>
+<meta itemprop="image" content="{{ site.url }}/{{ banner }}?time={{ site.time | date_to_xmlschema }}"/>
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
@@ -19,12 +31,12 @@
 <meta name="twitter:description" content="{{ description }}"/>
 <meta name="twitter:site" content="{{ page.twitter | default: '@FunctionsConf' }}"/>
 <meta name="twitter:creator" content="@ahmadnassri"/>
-<meta name="twitter:image" content="{{ site.url }}/images/twitter.png?time={{ site.time | date_to_xmlschema }}"/>
+<meta name="twitter:image" content="{{ site.url }}/{{ twitter }}?time={{ site.time | date_to_xmlschema }}"/>
 
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta property="og:title" content="{{ title }}"/>
 <meta property="og:description" content="{{ description }}"/>
-<meta property="og:image" content="{{ site.url }}/images/open-graph.png?time={{ site.time | date_to_xmlschema }}"/>
+<meta property="og:image" content="{{ site.url }}/{{ facebook }}?time={{ site.time | date_to_xmlschema }}"/>
 <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
 <meta property="og:site_name" content="{{ site.title }}"/>
 <meta property="fb:admins" content="227304446"/>
@@ -52,7 +64,7 @@
     }
   },
   "image": [
-    "{{ site.url }}/images/banner.png?time={{ site.time | date_to_xmlschema }}"
+    "{{ site.url }}/{{ banner }}?time={{ site.time | date_to_xmlschema }}"
   ]
 }
 </script>
