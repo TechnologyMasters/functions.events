@@ -1,5 +1,5 @@
 ---
-announced: false
+announced: true
 edition: 2018-toronto
 name: Simona Cotin
 company: Microsoft
