@@ -46,8 +46,7 @@ schedule:
     title: Lunch Break
 
   - time: 13:00Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: simona-cotin
 
   - time: 13:40Z
