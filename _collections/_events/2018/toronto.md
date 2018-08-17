@@ -50,8 +50,7 @@ schedule:
     speaker: simona-cotin
 
   - time: 13:40Z
-    type: placeholder
-    title: TBD
+    type: talk
     speaker: brian-leroux
 
   - time: 14:20Z

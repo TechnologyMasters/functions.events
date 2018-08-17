@@ -1,10 +1,11 @@
 ---
-announced: false
+announced: true
 edition: 2018-toronto
 name: Brian LeRoux
 company: Begin
 talk: "Functions: Faster to Deploy"
-bio: 
+bio: >
+  Brian LeRoux is currently building a continuous delivery vehicle for cloud functions called [begin.com](https://begin.com) on an open source foundation called [arc.codes](https://arc.codes). Previously he worked at Adobe on PhoneGap and Apache Cordova. He also created [wtfjs.com](https://wtfjs.com) and sports a questionable &nbsp; tattoo. Brian believes the future will be writ as functions, seamlessly running in the cloud, agnostic of vendors, on an open source platform and it will be stewarded by hackers like you.
 ---
 
 Functions are the key superpower enabling serverless architectures. Certainly the low cost of only paying for what you use (100% utilization) is a nice benefit. And no doubt there are operational savings by only focusing on your business logic instead of managing a brittle and complicated infrastructure. But designing with functions as the smallest unit of deployment also confers a much less talked about hidden superpower: functions are faster to deploy! Deploying a single function usually completes within 1 second. This is an order of magnitude improvement in most development workflow lead times to staging and/or production environments.
