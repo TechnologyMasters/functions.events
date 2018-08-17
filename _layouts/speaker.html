@@ -3,10 +3,13 @@ layout: default
 ---
 
 {% assign edition = page.edition | split: '-' %}
+{% assign year = edition[0] %}
+{% assign city = edition[1] %}
+{% assign today = site.time | date: '%Y' | convert: "number" %}
 
 <div class="row my-5">
   <div class="photo col-sm-3 mb-4">
-    <img class="hex" src="/images/{{ edition[0] }}/{{ edition[1] }}/speakers/{{ page.slug }}.jpg"/>
+    <img class="hex" src="/images/{{ year }}/{{ city }}/speakers/{{ page.slug }}.jpg"/>
   </div>
 
   <div class="col-sm-8">
@@ -17,7 +20,11 @@ layout: default
 </div>
 
 <h2>{{ page.talk }}</h2>
-<div class="mt-5">{{ content }}</div>
+<div class="my-5">{{ content }}</div>
+
+{% if year >= today %}
+  <a class="nav-link btn btn-lg btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register to attend this talk</a>
+{% endif %}
 
 {% if page.video %}
   <div class="embed-responsive embed-responsive-16by9">
