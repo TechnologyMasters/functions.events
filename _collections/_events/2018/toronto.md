@@ -14,7 +14,7 @@ schedule:
   - time: 08:00Z
     type: agenda
     title: Doors Open & Breakfast
-    text: Breakfast & Coffee!
+    text: Breakfast & Coffee
 
   - time: 09:00Z
     type: talk
@@ -31,7 +31,7 @@ schedule:
   - time: 10:30Z
     type: agenda
     title: Morning Break
-    text: Snacks & coffee
+    text: Snacks & Coffee
 
   - time: 10:40Z
     type: talk
@@ -46,7 +46,7 @@ schedule:
   - time: 12:00Z
     type: agenda
     title: Lunch Break
-    text: Lunch and soft beverages served to all attendees
+    text: Lunch with Soft Beverages
 
   - time: 13:00Z
     type: talk
@@ -59,7 +59,7 @@ schedule:
   - time: 14:20Z
     type: agenda
     title: Afternoon Break
-    text: Snacks & soft beverages
+    text: Snacks & Soft Beverages
 
   - time: 14:30Z
     type: talk
@@ -74,7 +74,7 @@ schedule:
   - time: 15:50Z
     type: agenda
     title: Last Break
-    text: Snacks & soft beverages
+    text: Snacks & Soft Beverages
 
   - time: 16:00Z
     type: talk
