@@ -116,7 +116,7 @@ layout: blank
         {% assign speaker = speakers | where: "slug", item.speaker | first %}
         <tr>
           <td width="140" class="d-none d-sm-table-cell"><time>{{ item.time | date: "%I:%M %p" }}</time></td>
-          <td class="d-none d-md-table-cell">
+          <td class="d-none d-md-table-cell" align="center">
             {% if item.type == 'talk' %}
               {% if item.speakers %}
                 {% assign first = speakers | where: "slug", item.speakers[0] | first %}
