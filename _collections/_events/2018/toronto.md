@@ -72,9 +72,8 @@ schedule:
     title: Last Break
 
   - time: 16:00Z
-    type: placeholder
-    title: TBD
-    speaker: soam-vasani
+    type: talk
+    speaker: nitzan-shapira
 
   - time: 16:40Z
     type: talk
