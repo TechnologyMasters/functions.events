@@ -148,6 +148,7 @@ layout: blank
               <a href="{{ panel.url }}"><span>Panel</span></a>
               <a href="{{ panel.url }}">{{ panel.title }}</a>
             {% else %}
+              {% if item.text %}<span>{{ item.text }}</span>{% endif %}
               {{ item.title }}
             {% endif %}
           </td>

@@ -14,10 +14,11 @@ schedule:
   - time: 08:00Z
     type: agenda
     title: Doors Open & Breakfast
+    text: Breakfast & Coffee available!
 
   - time: 09:00Z
-    type: agenda
-    title: Kickoff & Opening Notes
+    type: talk
+    speaker: ahmad-nassri
 
   - time: 09:10Z
     type: talk
@@ -30,6 +31,7 @@ schedule:
   - time: 10:30Z
     type: agenda
     title: Morning Break
+    text: Snacks & coffee available
 
   - time: 10:40Z
     type: talk
@@ -44,6 +46,7 @@ schedule:
   - time: 12:00Z
     type: agenda
     title: Lunch Break
+    text: Lunch and soft beverages served to all attendees
 
   - time: 13:00Z
     type: talk
@@ -56,6 +59,7 @@ schedule:
   - time: 14:20Z
     type: agenda
     title: Afternoon Break
+    text: Snacks & soft beverages available
 
   - time: 14:30Z
     type: talk
@@ -70,6 +74,7 @@ schedule:
   - time: 15:50Z
     type: agenda
     title: Last Break
+    text: Snacks & soft beverages available
 
   - time: 16:00Z
     type: talk
@@ -86,10 +91,11 @@ schedule:
   - time: 17:30Z
     type: agenda
     title: Networking
+    text: Snacks & alcoholic beverages served
 
-  - time: 21:00Z
-    type: agenda
-    title: After Party
+  # - time: 21:00Z
+  #   type: agenda
+  #   title: After Party
 ---
 
 Functions 2018 is a **community focused, single track, one day conference** that moves away from the hype and focuses on the reality of serverless based solutions. It's about fostering a community locally and helping all of us learn from each other as we embrace a new way of building applications.
