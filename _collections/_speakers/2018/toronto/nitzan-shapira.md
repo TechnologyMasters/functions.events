@@ -6,9 +6,8 @@ twitter: nitzanshapira
 company: Epsagon
 talk: Distributed Tracing in Serverless Systems
 bio: > 
-  I am a software engineer with over 12 years of experience in programming, machine learning, cyber-security, and reverse engineering. During the last year, I am working on Epsagon, being a co-founder and the CEO. Epsagon is focused on bringing B observability to serverless cloud applications, using distributed tracing and AI technologies, tackling the unique challenges in such environments.
-    
-  Apart from co-founding Epsagon, I enjoy playing the piano, I am a traveling enthusiast, an experienced chess player, and addicted to sports.
+  Nitzan is a co-founder and the CEO at Epsagon, focused on bringing observability to serverless cloud applications. Nitzan is also a software engineer with over 12 years of experience in programming, machine learning, cyber-security, and reverse engineering. Using distributed tracing and AI technologies, his team is tackling the unique observability challenges in serverless environments  
+  Apart from co-founding Epsagon, Nitzan also enjoys playing the piano, he is a traveling enthusiast, an experienced chess player, and addicted to sports.
 ---
 
 Observability of serverless, distributed systems is complex since each service is separated and from the others. Distributed tracing is key to understanding such systems. In serverless, there are unique challenges and opportunities which make distributed tracing powerful for gaining observability.
