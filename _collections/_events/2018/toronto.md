@@ -78,7 +78,7 @@ schedule:
 
   - time: 16:00Z
     type: talk
-    speaker: nitzan-shapira
+    speaker: ron-yishai
 
   - time: 16:40Z
     type: talk

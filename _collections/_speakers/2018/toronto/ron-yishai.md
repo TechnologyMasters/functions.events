@@ -1,13 +1,12 @@
 ---
 announced: true
 edition: 2018-toronto
-name: Nitzan Shapira
-twitter: nitzanshapira
+name: Ron Yishai
+twitter: RonYishai
 company: Epsagon
 talk: Distributed Tracing in Serverless Systems
 bio: > 
-  Nitzan is a co-founder and the CEO at Epsagon, focused on bringing observability to serverless cloud applications. Nitzan is also a software engineer with over 12 years of experience in programming, machine learning, cyber-security, and reverse engineering. Using distributed tracing and AI technologies, his team is tackling the unique observability challenges in serverless environments  
-  Apart from co-founding Epsagon, Nitzan also enjoys playing the piano, he is a traveling enthusiast, an experienced chess player, and addicted to sports.
+  I am a software engineer with an academic background in Mathematics, experienced in cyber-security, reverse engineering, machine learning - and recently also a Serverless enthusiast. During the last year, I am working as a senior developer on Epsagon - a startup focused on bringing observability to serverless cloud applications, using distributed tracing and AI technologies, tackling the unique challenges in such environments.
 ---
 
 Observability of serverless, distributed systems is complex since each service is separated and from the others. Distributed tracing is key to understanding such systems. In serverless, there are unique challenges and opportunities which make distributed tracing powerful for gaining observability.
