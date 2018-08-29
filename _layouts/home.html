@@ -171,8 +171,24 @@ layout: blank
     <h2 id="partners" class="py-5">Partners</h2>
 
     <div class="row align-items-center">
-      {% for partner in partners %}
-        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} my-5">
+      {% for partner in partners limit: 3 offset: 0 %}
+        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
+          <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row align-items-center">
+      {% for partner in partners limit: 3 offset: 3 %}
+        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
+          <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row align-items-center">
+      {% for partner in partners limit: 3 offset: 6 %}
+        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
           <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}
