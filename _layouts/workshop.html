@@ -8,7 +8,7 @@ layout: default
 {% assign today = site.time | date: '%Y' | convert: "number" %}
 
 <h1><strong>Workshop:</strong> {{ page.title }}</h1>
-<h2>Presented Bt: {{ page.company }}</h2>
+<h2>Presented By: {{ page.company }}</h2>
 {{ content }}
 
 {% if year >= today %}
