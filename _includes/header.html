@@ -36,6 +36,10 @@
       {% if partners.size > 0 %}
         <a class="nav-link" href="/{{ year }}/{{ city }}/#partners">Partners</a>
       {% endif %}
+
+      {% if page.schedule %}
+        <a class="nav-link" href="/{{ year }}/{{ city }}/#schedule">Schedule</a>
+      {% endif %}
     {% endif %}
 
     <a class="nav-link" href="/events">{% if today > year %}Future Events{% else %}Past Events{% endif %}</a>
