@@ -82,7 +82,7 @@ layout: blank
     <h2 id="sponsors" class="py-5">Sponsors</h2>
     <div class="row">
       {% for sponsor in gold %}
-        <div class="sponsor col-sm-5 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
+        <div class="sponsor offset-1 col-10 col-sm-5 {% if forloop.index > 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
@@ -90,7 +90,7 @@ layout: blank
 
     <div class="row">
       {% for sponsor in silver %}
-        <div class="sponsor col-sm-3 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
+        <div class="sponsor offset-2 col-8 col-sm-3 {% if forloop.index > 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
@@ -98,7 +98,7 @@ layout: blank
 
     <div class="row">
       {% for sponsor in bronze %}
-        <div class="sponsor col-sm-2 {% if forloop.index > 1 %}offset-md-1{% endif %} my-5">
+        <div class="sponsor offset-3 col-6 col-sm-2 {% if forloop.index > 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
@@ -172,7 +172,7 @@ layout: blank
 
     <div class="row align-items-center">
       {% for partner in partners limit: 3 offset: 0 %}
-        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
+        <div class="partner offset-2 col-8 {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}
@@ -180,7 +180,7 @@ layout: blank
 
     <div class="row align-items-center">
       {% for partner in partners limit: 3 offset: 3 %}
-        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
+        <div class="partner offset-2 col-8 {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}
@@ -188,7 +188,7 @@ layout: blank
 
     <div class="row align-items-center">
       {% for partner in partners limit: 3 offset: 6 %}
-        <div class="partner {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% endif %} my-5">
+        <div class="partner offset-2 col-8 {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>
       {% endfor %}
