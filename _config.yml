@@ -25,6 +25,10 @@ collections:
     output: true
     permalink: /:path/
 
+  workshops:
+    output: true
+    permalink: /:path/
+
   partners:
     output: false
     permalink: /:path/
@@ -43,6 +47,11 @@ defaults:
       type: speakers
     values:
       layout: speaker
+
+  - scope:
+      type: workshops
+    values:
+      layout: workshop
 
   - scope:
       type: panels

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% assign edition = page.edition | split: '-' %}
+{% assign year = edition[0] %}
+{% assign city = edition[1] %}
+{% assign today = site.time | date: '%Y' | convert: "number" %}
+
+<h1><strong>Workshop:</strong> {{ page.title }}</h1>
+<h2>Presented Bt: {{ page.company }}</h2>
+{{ content }}
+
+{% if year >= today %}
+  <a class="nav-link btn btn-lg btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register to attend this workshop</a>
+{% endif %}

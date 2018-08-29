@@ -11,6 +11,7 @@ layout: blank
 {% assign sponsors = site.sponsors | where: "edition", edition %}
 {% assign partners = site.partners | where: "edition", edition %}
 {% assign speakers = site.speakers | where: "edition", edition %}
+{% assign workshops = site.workshops | where: "edition", edition %}
 
 <main class="container d-flex flex-column w-100 pt-5 mx-auto">
   {% include header.html %}
@@ -114,6 +115,7 @@ layout: blank
       {% for item in page.schedule %}
         {% assign panel = panels | where: "slug", item.panel | first %}
         {% assign speaker = speakers | where: "slug", item.speaker | first %}
+        {% assign workshop = workshops | where: "slug", item.workshop | first %}
         <tr>
           <td width="140" class="d-none d-sm-table-cell"><time>{{ item.time | date: "%I:%M %p" }}</time></td>
           <td class="d-none d-md-table-cell" align="center">
@@ -147,6 +149,9 @@ layout: blank
             {% elsif item.type == 'panel' %}
               <a href="{{ panel.url }}"><span>Panel</span></a>
               <a href="{{ panel.url }}">{{ panel.title }}</a>
+            {% elsif item.type == 'workshop' %}
+              <a href="{{ workshop.url }}"><span><strong>Workshop</strong> - presented by: {{ workshop.company }}</span></a>
+              <a href="{{ workshop.url }}">{{ workshop.title }}</a>
             {% else %}
               {% if item.text %}<span>{{ item.text }}</span>{% endif %}
               {{ item.title }}

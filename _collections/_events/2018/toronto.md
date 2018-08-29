@@ -89,6 +89,14 @@ schedule:
     title: Closing Remarks
 
   - time: 17:30Z
+    type: workshop
+    workshop: standard-library
+
+  - time: 17:30Z
+    type: workshop
+    workshop: microsoft
+
+  - time: 17:30Z
     type: agenda
     title: Networking
     text: Snacks & alcoholic beverages served

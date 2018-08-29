@@ -1,0 +1,7 @@
+@import "/css/base.css";
+
+h1,
+h2,
+h3 {
+  padding: .5em 0;
+}

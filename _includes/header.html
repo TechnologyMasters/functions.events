@@ -19,10 +19,10 @@
 {% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
 
 <header class="d-flex justify-content-between mb-5">
-  <img class="d-none d-md-block" src="/images/{{ year }}/icon.svg"/>
+  <a href="/"><img class="d-none d-md-block" src="/images/{{ year }}/icon.svg"/></a>
 
   <nav class="nav my-auto">
-    <a class="nav-link {% if page.url == home %}active{% endif %}" href="{{ home }}">Home</a>
+    <a class="nav-link" href="{{ home }}">Home</a>
 
     {% if url[2] %}
       {% if speakers.size > 0 %}
