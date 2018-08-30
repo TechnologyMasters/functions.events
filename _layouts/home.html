@@ -83,7 +83,7 @@ layout: blank
     <h2 id="sponsors" class="py-5">Sponsors</h2>
     <div class="row">
       {% for sponsor in gold %}
-        <div class="sponsor offset-1 col-10 col-sm-5 {% if forloop.index > 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
+        <div class="sponsor offset-1 col-10 col-sm-5 {% if forloop.index == 2 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a target="_blank" href="{{ sponsor.link }}"><img src="/images/{{ year }}/{{ city }}/sponsors/{{ sponsor.slug }}.svg"/></a>
         </div>
       {% endfor %}
