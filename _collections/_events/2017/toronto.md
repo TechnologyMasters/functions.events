@@ -7,7 +7,9 @@ venue:
   address: 3rd Floor, TELUS Tower, 25 York St, Toronto, ON M5J 2V5, Canada
   placeId: ChIJVfQYutQ0K4gRau7qw7Cnwjk
 eventbrite: 35394300305
-cfp: https://github.com/functions-conf/contributing/
+cfp:
+  open: false
+  url: https://github.com/functions-conf/contributing/
 schedule:
   - time: 09:00Z
     type: agenda

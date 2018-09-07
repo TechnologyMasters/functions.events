@@ -9,7 +9,10 @@ venue:
   map: https://goo.gl/maps/uA4Zy6KHp1M2
   placeId: ChIJVfQYutQ0K4gRau7qw7Cnwjk
 eventbrite: 47131227771
-cfp: https://www.papercall.io/serverless-to-2018
+cfp: 
+  open: false
+  url: https://www.papercall.io/serverless-to-2018
+swag: https://techmasters.threadless.com/designs/functions-2018/
 schedule:
   - time: 08:00Z
     type: agenda

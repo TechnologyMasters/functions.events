@@ -32,7 +32,11 @@ layout: blank
             <a href="#tickets" class="btn btn-lg btn-primary btn-block">Reserve Your Spot</a>
           </div>
           <div class="col-12 col-sm-6 mb-3">
-            <a target="_blank" href="{{ page.cfp }}" class="btn btn-lg btn-secondary btn-block">Apply to speak</a>
+            {% if page.cfp.open %}
+              <a target="_blank" href="{{ page.cfp.url }}" class="btn btn-lg btn-secondary btn-block">Apply to speak</a>
+            {% else %}
+              <a target="_blank" href="{{ page.swag }}" class="btn btn-lg btn-secondary btn-block">Get Swag</a>
+            {% endif %}
           </div>
           <div class="col-12 col-sm-6 mb-3">
             <a target="_blank" href="http://eepurl.com/dzb06P" class="btn btn-lg btn-secondary btn-block">Newsletter Sign up</a>
