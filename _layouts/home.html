@@ -145,7 +145,7 @@ layout: blank
                 {% assign first = speakers | where: "slug", item.speakers[0] | first %}
                 {% assign second = speakers | where: "slug", item.speakers[1] | first %}
                 <span><a href="{{ first.url }}">{{ first.name }}</a> & <a href="{{ second.url }}">{{ second.name }}</a></span>
-                <a href="{{ speaker.url }}">{{ first.talk }}</a>
+                <a href="{{ first.url }}">{{ first.talk }}</a>
               {% else %}
                 <a href="{{ speaker.url }}"><span>{{ speaker.name }}</span></a>
                 <a href="{{ speaker.url }}">{{ speaker.talk }}</a>
