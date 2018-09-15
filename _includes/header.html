@@ -16,13 +16,11 @@
 {% assign header_partners = site.partners | where: "edition", header_edition %}
 {% assign header_speakers = site.speakers | where: "edition", header_edition %}
 
-{% assign home = '/' | append: header_year | append: '/' | append: header_city | append: '/' %}
-
 <header class="d-flex justify-content-between mb-5">
-  <a href="/"><img class="d-none d-md-block" src="/images/{{ header_year }}/icon.svg"/></a>
+  <a href="/{{ header_year }}/{{ header_city }}/"><img class="d-none d-md-block" src="/images/{{ header_year }}/icon.svg"/></a>
 
   <nav class="nav my-auto">
-    <a class="nav-link" href="{{ home }}">Home</a>
+    <a class="nav-link" href="/{{ header_year }}/{{ header_city }}/">Home</a>
 
     {% if url[2] %}
       {% if header_speakers.size > 0 %}
