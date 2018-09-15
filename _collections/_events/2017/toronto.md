@@ -10,6 +10,9 @@ eventbrite: 35394300305
 cfp:
   open: false
   url: https://github.com/functions-conf/contributing/
+
+swag: https://techmasters.threadless.com/designs/functions-2018/
+
 schedule:
   - time: 09:00Z
     type: agenda

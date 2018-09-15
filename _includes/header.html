@@ -1,50 +1,51 @@
-{% include variables.html %}
-
 {% assign url = page.url | split: '/' %}
 {% assign today = site.time | date: '%Y' | convert: "number" %}
 {% assign event = site.events | where:"current", true | first %}
 
 {% if url[2] %}
-  {% assign year = url[1] | convert: "number" %}
-  {% assign city = url[2] %}
+  {% assign header_year = url[1] | convert: "number" %}
+  {% assign header_city = url[2] %}
 {% else %}
-  {% assign year = event.date | date: '%Y' %}
-  {% assign city = event.city | downcase %}
+  {% assign header_year = event.date | date: '%Y' %}
+  {% assign header_city = event.city | downcase %}
 {% endif %}
 
-{% assign edition = year | append: '-' | append: city %}
+{% assign header_edition = header_year | append: '-' | append: header_city %}
 
+{% assign header_sponsors = site.sponsors | where: "edition", header_edition %}
+{% assign header_partners = site.partners | where: "edition", header_edition %}
+{% assign header_speakers = site.speakers | where: "edition", header_edition %}
 
-{% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
+{% assign home = '/' | append: header_year | append: '/' | append: header_city | append: '/' %}
 
 <header class="d-flex justify-content-between mb-5">
-  <a href="/"><img class="d-none d-md-block" src="/images/{{ year }}/icon.svg"/></a>
+  <a href="/"><img class="d-none d-md-block" src="/images/{{ header_year }}/icon.svg"/></a>
 
   <nav class="nav my-auto">
     <a class="nav-link" href="{{ home }}">Home</a>
 
     {% if url[2] %}
-      {% if speakers.size > 0 %}
-        <a class="nav-link" href="/{{ year }}/{{ city }}/#speakers">Speakers</a>
+      {% if header_speakers.size > 0 %}
+        <a class="nav-link" href="/{{ header_year }}/{{ header_city }}/#speakers">Speakers</a>
       {% endif %}
 
-      {% if sponsors.size > 0 %}
-        <a class="nav-link" href="/{{ year }}/{{ city }}/#sponsors">Sponsors</a>
+      {% if header_sponsors.size > 0 %}
+        <a class="nav-link" href="/{{ header_year }}/{{ header_city }}/#sponsors">Sponsors</a>
       {% endif %}
 
-      {% if partners.size > 0 %}
-        <a class="nav-link" href="/{{ year }}/{{ city }}/#partners">Partners</a>
+      {% if header_partners.size > 0 %}
+        <a class="nav-link" href="/{{ header_year }}/{{ header_city }}/#partners">Partners</a>
       {% endif %}
 
       {% if page.schedule %}
-        <a class="nav-link" href="/{{ year }}/{{ city }}/#schedule">Schedule</a>
+        <a class="nav-link" href="/{{ header_year }}/{{ header_city }}/#schedule">Schedule</a>
       {% endif %}
     {% endif %}
 
     <a class="nav-link" href="/events">{% if today > year %}Future Events{% else %}Past Events{% endif %}</a>
 
-    {% if year >= today %}
-      <a class="nav-link btn btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register Now</a>
+    {% if header_year >= today %}
+      <a class="nav-link btn btn-primary d-none d-md-block" href="/{{ header_year }}/{{ header_city }}/#tickets">Register Now</a>
     {% endif %}
   </nav>
 </header>
