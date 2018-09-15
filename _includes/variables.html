@@ -1,0 +1,10 @@
+{% assign date = site.time %}
+{% assign year = page.date | date: '%Y' %}
+{% assign city = page.city | downcase %}
+{% assign edition = year | append: '-' | append: city %}
+
+{% assign panels = site.panels | where: "edition", edition %}
+{% assign sponsors = site.sponsors | where: "edition", edition %}
+{% assign partners = site.partners | where: "edition", edition | sort: "order" %}
+{% assign speakers = site.speakers | where: "edition", edition %}
+{% assign workshops = site.workshops | where: "edition", edition %}

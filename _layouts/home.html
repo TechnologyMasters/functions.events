@@ -2,16 +2,7 @@
 layout: blank
 ---
 
-{% assign date = site.time %}
-{% assign year = page.date | date: '%Y' %}
-{% assign city = page.city | downcase %}
-{% assign edition = year | append: '-' | append: city %}
-
-{% assign panels = site.panels | where: "edition", edition %}
-{% assign sponsors = site.sponsors | where: "edition", edition %}
-{% assign partners = site.partners | where: "edition", edition %}
-{% assign speakers = site.speakers | where: "edition", edition %}
-{% assign workshops = site.workshops | where: "edition", edition %}
+{% include variables.html %}
 
 <main class="container d-flex flex-column w-100 pt-5 mx-auto">
   {% include header.html %}
@@ -197,6 +188,14 @@ layout: blank
 
     <div class="row align-items-center">
       {% for partner in partners limit: 3 offset: 6 %}
+        <div class="partner offset-2 col-8 {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
+          <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row align-items-center">
+      {% for partner in partners limit: 6 offset: 9 %}
         <div class="partner offset-2 col-8 {% if partner.stretch %}col-sm-4{% else %}col-sm-2{% endif %} {% if forloop.index != 1 %}offset-md-1{% else %}offset-md-0{% endif %} my-5">
           <a href="{{ partner.link }}"><img src="/images/partners/{% if partner.logo %}{{ partner.logo }}{% else %}{{ partner.slug }}.svg{% endif %}"/></a>
         </div>

@@ -1,3 +1,5 @@
+{% include variables.html %}
+
 {% assign url = page.url | split: '/' %}
 {% assign today = site.time | date: '%Y' | convert: "number" %}
 {% assign event = site.events | where:"current", true | first %}
@@ -12,9 +14,6 @@
 
 {% assign edition = year | append: '-' | append: city %}
 
-{% assign sponsors = site.sponsors | where: "edition", edition %}
-{% assign partners = site.partners | where: "edition", edition %}
-{% assign speakers = site.speakers | where: "edition", edition %}
 
 {% assign home = '/' | append: year | append: '/' | append: city | append: '/' %}
 
