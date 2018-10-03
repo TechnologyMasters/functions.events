@@ -4,6 +4,7 @@ edition: 2018-toronto
 name: Brian LeRoux
 company: Begin
 talk: "Functions: Faster to Deploy"
+speakerdeck: a2a3996c017d4acd884fc003dded96ca
 bio: >
   Brian LeRoux is currently building a continuous delivery vehicle for cloud functions called [begin.com](https://begin.com) on an open source foundation called [arc.codes](https://arc.codes). Previously he worked at Adobe on PhoneGap and Apache Cordova. He also created [wtfjs.com](https://wtfjs.com) and sports a questionable &nbsp; tattoo. Brian believes the future will be writ as functions, seamlessly running in the cloud, agnostic of vendors, on an open source platform and it will be stewarded by hackers like you.
 ---
