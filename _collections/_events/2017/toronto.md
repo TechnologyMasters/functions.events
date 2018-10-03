@@ -1,6 +1,7 @@
 ---
 city: Toronto
 date: 2017-08-25T09:00:00Z
+edition: 2017-toronto
 title: Functions 17
 venue:
   name: TELUS Harbour

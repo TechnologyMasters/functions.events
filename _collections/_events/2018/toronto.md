@@ -2,6 +2,7 @@
 current: true
 city: Toronto
 date: 2018-09-28T09:00:00Z
+edition: 2018-toronto
 title: Functions 18 - ServerlessDays Toronto
 venue: 
   name: TELUS Harbour
@@ -13,6 +14,9 @@ cfp:
   open: false
   url: https://www.papercall.io/serverless-to-2018
 swag: https://techmasters.threadless.com/designs/functions-2018/
+flickr:
+  album: https://www.flickr.com/photos/ahmadnassri/44315575524/in/album-72157701944708385/
+  photo: https://farm2.staticflickr.com/1914/44315575524_67f16c9dc5_k.jpg
 schedule:
   - time: 08:00Z
     type: agenda

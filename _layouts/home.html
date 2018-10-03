@@ -36,6 +36,15 @@ layout: blank
       {% else %}
         <div class="row my-5">
           <div class="col-12 col-sm-6 mb-3">
+            <a href="#schedule" class="btn btn-lg btn-primary btn-block">Review Talks</a>
+          </div>
+          {% if page.flickr %}
+            <div class="col-12 col-sm-6 mb-3">
+              <a href="#gallery" class="btn btn-lg btn-primary btn-block">View Gallery</a>
+            </div>
+          {% endif %}
+
+          <div class="col-12 col-sm-6 mb-3">
             <a target="_blank" href="{{ page.swag }}" class="btn btn-lg btn-secondary btn-block">Get Swag</a>
           </div>
           <div class="col-12 col-sm-6 mb-3">
@@ -213,7 +222,13 @@ layout: blank
   </div>
 {% endif %}
 
-{% if page.venue %}
+{% if page.flickr %}
+  <div class="container w-100 my-5">
+    <h2 id="gallery" class="py-5">Gallery</h2>
+
+    <a data-flickr-embed="true" data-context="true" href="{{ page.flickr.album }}" title="Functions18-2"><img src="{{ page.flickr.photo }}" width="100%"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
+{% elsif page.venue %}
   <div class="container w-100 my-5">
     <h2 id="location" class="py-5">Location</h2>
     <p><strong>{{ page.venue.name }}</strong></p>
