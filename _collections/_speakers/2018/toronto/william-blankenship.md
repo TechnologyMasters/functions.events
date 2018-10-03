@@ -4,6 +4,7 @@ edition: 2018-toronto
 name: William Blankenship
 company: Netflix
 talk: "Innovating with confidence: FaaS at Netflix"
+speakerdeck: 93bc3ba448894651951e020a09aa37d8
 bio: >
   William Blankenship is a senior software engineer at Netflix building an internal FaaS for the next generation of the Netflix API.
 ---
