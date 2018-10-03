@@ -226,7 +226,7 @@ layout: blank
   <div class="container w-100 my-5">
     <h2 id="gallery" class="py-5">Gallery</h2>
 
-    <a data-flickr-embed="true" data-context="true" href="{{ page.flickr.album }}" title="Functions18-2"><img src="{{ page.flickr.photo }}" width="100%"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    <a data-flickr-embed="true" href="{{ page.flickr.album }}"><img src="{{ page.flickr.photo }}" width="100%" alt="Functions 2018"></a><script async src="https:////embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   </div>
 {% elsif page.venue %}
   <div class="container w-100 my-5">
@@ -256,7 +256,7 @@ layout: blank
   </script>
 {% endif %}
 
-{% if page.venue %}
+{% if page.flickr == null and page.venue %}
   <script>
     const venue = {{ page.venue | jsonify }}
   </script>
