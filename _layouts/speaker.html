@@ -5,7 +5,7 @@ layout: default
 {% assign edition = page.edition | split: '-' %}
 {% assign year = edition[0] %}
 {% assign city = edition[1] %}
-{% assign today = site.time | date: '%Y' | convert: "number" %}
+{% assign event = site.events | where:"edition", page.edition | first %}
 
 <div class="row my-5">
   <div class="photo col-sm-3 mb-4">
@@ -22,8 +22,12 @@ layout: default
 <h2>{{ page.talk }}</h2>
 <div class="my-5">{{ content }}</div>
 
-{% if year >= today %}
+{% if event.date > site.time %}
   <a class="nav-link btn btn-lg btn-primary d-none d-md-block" href="/{{ year }}/{{ city }}/#tickets">Register to attend this talk</a>
+{% endif %}
+
+{% if page.speakerdeck %}
+  <script class="speakerdeck-embed" data-id="{{ page.speakerdeck }}" data-ratio="1.77777777777778" src="https:////speakerdeck.com/assets/embed.js"></script>
 {% endif %}
 
 {% if page.video %}

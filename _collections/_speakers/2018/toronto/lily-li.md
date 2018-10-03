@@ -4,6 +4,7 @@ edition: 2018-toronto
 name: Lily Li
 company: D2L
 talk: When Serverless Gets In the Way of Scalability
+speakerdeck: b228d17b5a5d4b65be8db8f629db479d
 bio: >
   Lily Li is a senior software developer. She became passionate about performance and scalability in networking and distributed systems when obtaining her Master's Degree from University of Waterloo. For the last two years, she has been working in D2L focusing on scalability issues in AWS, building large-scale web applications based on Serverless technologies and event-driven architecture. She has also been leading on the effort of best practices and design patterns for microservices. As an advocate of software performance engineering, she enjoys to deliver talks on performance and scalability to her peers. Prior to D2L, Lily worked with large-scale messaging system in RIM.
 ---
