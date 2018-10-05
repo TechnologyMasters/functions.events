@@ -4,6 +4,7 @@ edition: 2018-toronto
 name: Nicholas Gottlieb
 company: Serverless
 talk: Achieving vendor choice in a serverless world
+speakerdeck: 9d15c190d08242729f40bcaa83ae8511
 video: a0rGskZ4SHc
 bio: >
   Nicholas is the VP of Growth and part of the founding team at Serverless Inc where he leads their go-to-market strategy. Prior to joining Serverless he lead go-to-market at CircleCI where he was their first business hire. When he's not helping companies ship software faster he enjoys surfing, sailing, and getting lost in the mountains. 
