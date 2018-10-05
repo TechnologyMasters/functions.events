@@ -14,6 +14,8 @@ cfp:
 
 swag: https://techmasters.threadless.com/designs/functions-2018/
 
+playlist: PLNoTOsTRYfvjgYXgrqHwu7w7kUVC4s4tu
+
 schedule:
   - time: 09:00Z
     type: agenda

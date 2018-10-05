@@ -18,7 +18,7 @@ layout: blank
       <div class="lead mb-5">{{ content }}</div>
 
       {% if page.date >= date %}
-        <div class="row my-5">
+        <div class="row mt-5">
           <div class="col-12 col-sm-12 mb-3">
             <a href="#tickets" class="btn btn-lg btn-primary btn-block">Reserve Your Spot</a>
           </div>
@@ -34,16 +34,25 @@ layout: blank
           </div>
         </div>
       {% else %}
-        <div class="row my-5">
-          <div class="col-12 col-sm-6 mb-3">
-            <a href="#schedule" class="btn btn-lg btn-primary btn-block">Review Talks</a>
-          </div>
-          {% if page.flickr %}
+        <div class="row mt-5">
+          {% if page.playlist %}
             <div class="col-12 col-sm-6 mb-3">
-              <a href="#gallery" class="btn btn-lg btn-primary btn-block">View Gallery</a>
+              <a href="#playlist" class="btn btn-lg btn-primary btn-block">Watch Replay</a>
             </div>
           {% endif %}
 
+          {% if page.flickr %}
+            <div class="col-12 col-sm-6 mb-3">
+              <a href="#gallery" class="btn btn-lg btn-primary btn-block">Photo Gallery</a>
+            </div>
+          {% endif %}
+
+          <div class="col-12 mb-3">
+            <a href="#schedule" class="btn btn-lg btn-primary btn-block">Presentations</a>
+          </div>
+        </div>
+
+        <div class="row mt-3">
           <div class="col-12 col-sm-6 mb-3">
             <a target="_blank" href="{{ page.swag }}" class="btn btn-lg btn-secondary btn-block">Get Swag</a>
           </div>
@@ -228,7 +237,19 @@ layout: blank
 
     <a data-flickr-embed="true" href="{{ page.flickr.album }}"><img src="{{ page.flickr.photo }}" width="100%" alt="Functions 2018"></a><script async src="https:////embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   </div>
-{% elsif page.venue %}
+{% endif %}
+
+{% if page.playlist %}
+  <div id="playlist" class="container w-100 my-5">
+    <h2 id="gallery" class="py-5">Replay</h2>
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list={{ page.playlist }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+{% endif %}
+
+{% if page.venue %}
   <div class="container w-100 my-5">
     <h2 id="location" class="py-5">Location</h2>
     <p><strong>{{ page.venue.name }}</strong></p>

@@ -17,6 +17,7 @@ swag: https://techmasters.threadless.com/designs/functions-2018/
 flickr:
   album: https://www.flickr.com/photos/ahmadnassri/albums/72157701944708385
   photo: https://farm2.staticflickr.com/1914/44315575524_67f16c9dc5_k.jpg
+playlist: PLNoTOsTRYfvhLh8sVrI6lHXfhIbDSons3
 schedule:
   - time: 08:00Z
     type: agenda
