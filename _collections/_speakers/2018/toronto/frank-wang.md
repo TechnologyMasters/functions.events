@@ -5,8 +5,9 @@ name: Frank Wang
 company: Seed
 talk: Serverless - Democratizing Application Development 
 speakerdeck: a37cbaa0ceaf4baabb35851265ae069d
+video: 2XvER3QZapk
 bio: >
-  Frank Wang is the founder of Seed, a fully-managed CI/CD service for Serverless. He is also the author of Serverless Stack, the most popular guide to building full-stack Serverless applications.
+  Frank is the founder of Seed, a fully-managed CI/CD service for Serverless. He is also the author of Serverless Stack, the most popular guide to building full-stack Serverless applications.
 ---
 
 We'll start by looking at why there has been a divide between front-end and back-end development. And why the complexity of back-end development has made it very hard for a lot of individuals to build real world applications.
