@@ -6,6 +6,7 @@ company: Google
 talk: "Knative and Kubernetes: bringing serverless to more developers"
 twitter: bretmcg
 speakerdeck: 9a25d9334eac442b9b771f9000a176d2
+video: VmyRPZpAHEY
 bio: > 
   Bret is a Developer Advocate for Serverless on the Google Cloud Platform team at Google, focusing on serverless products like Google Cloud Functions, App Engine, Firebase, machine learning APIs, and more. He's currently an aspiring Node.js developer. Prior to Google, Bret worked as a software engineer in the cloud industry at Rackspace. He's often on the running trail, volleyball court or kickball field.  
     
