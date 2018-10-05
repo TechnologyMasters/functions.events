@@ -11,7 +11,7 @@ bio: >
 
 Functions are the key superpower enabling serverless architectures. Certainly the low cost of only paying for what you use (100% utilization) is a nice benefit. And no doubt there are operational savings by only focusing on your business logic instead of managing a brittle and complicated infrastructure. But designing with functions as the smallest unit of deployment also confers a much less talked about hidden superpower: functions are faster to deploy! Deploying a single function usually completes within 1 second. This is an order of magnitude improvement in most development workflow lead times to staging and/or production environments.
 
-In this talk we’ll start small by setting up a few functions. We’ll build on that foundation with more and more functions, provisioning, deploying and iterating as we go.
+In this talk we'll start small by setting up a few functions. We'll build on that foundation with more and more functions, provisioning, deploying and iterating as we go.
 
 Key takeaways:
 
@@ -20,4 +20,4 @@ Key takeaways:
 - Finding natural points to break up an app into smaller functions; create and deploy app wide iterations faster
 - Iterate even more rapidly with surgical deployments; make debugging and refactoring a snap
 
-Functions based apps are more resilient, easier to setup, they cost less and enable faster deployments. In this talk you’ll learn how to resolve bugs faster and add new features with grace and speed using the AWS Lambda family of serverless services.
+Functions based apps are more resilient, easier to setup, they cost less and enable faster deployments. In this talk you'll learn how to resolve bugs faster and add new features with grace and speed using the AWS Lambda family of serverless services.
