@@ -5,6 +5,7 @@ name: Simona Cotin
 company: Microsoft
 talk: Build Scalable APIs using GraphQL and Serverless
 speakerdeck: 9ae33c0f47f64b4fa15413fefeab327a
+video: y461I07P1dM
 bio: >
   I fell in love with coding 15 years ago. Ever since I have hacked all kinds of projects in C/C++, Delphi, C#, PHP, Java, Python, Lisp, Javascript and hoping to learn Go this year. I started my career writing Delphi for Rad Studio at Borland (or Embarcadero). While working for Corvil and Arista Networks, developed a passion for data analytics platforms and network data as well as Angular with Typescript (right before it became super popular).
 ---
