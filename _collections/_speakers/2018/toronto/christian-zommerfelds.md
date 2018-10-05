@@ -5,6 +5,7 @@ name: Christian Zommerfelds
 company: D2L
 talk: When Serverless Gets In the Way of Scalability
 speakerdeck: b228d17b5a5d4b65be8db8f629db479d
+video: qtr6hDf1Oak
 bio: >
   Christian is a software developer with a passion for big data and machine learning problems. At D2L, he and his team is building products using pure managed services such as AWS Lambda and DynamoDB. He has a passion for automating development and deployment pipelines using tools such as Terraform, which strengthens the DevOps model. Christian has a Master's Degree in Computer Science at EPFL in Switzerland.
 ---
