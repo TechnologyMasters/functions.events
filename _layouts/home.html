@@ -277,7 +277,7 @@ layout: blank
   </script>
 {% endif %}
 
-{% if page.flickr == null and page.venue %}
+{% if page.venue %}
   <script>
     const venue = {{ page.venue | jsonify }}
   </script>
