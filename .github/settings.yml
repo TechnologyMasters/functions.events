@@ -1,5 +1,5 @@
 repository:
-  name: website
+  name: functions.events
   description: Contribute to Functions Conf
   topics: conference, functions, faas, serverless, serverlessdays, serverlessTO, serverlessVan
   homepage: https://functions.events
